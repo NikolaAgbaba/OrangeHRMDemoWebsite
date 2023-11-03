@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="">
+    <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="Renamed the helper class so that it makes more sense, deleted commented code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +26,20 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NikolaAgbaba"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="0910600e-29f2-4574-b508-b329142cea85" />
+        <option name="url" value="https://github.com/NikolaAgbaba/VegaITProject" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -79,8 +91,17 @@
       <updated>1698922581690</updated>
       <workItem from="1698922582911" duration="16070000" />
       <workItem from="1698941048405" duration="6000" />
-      <workItem from="1698998577984" duration="5698000" />
+      <workItem from="1698998577984" duration="8162000" />
     </task>
+    <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
+      <option name="closed" value="true" />
+      <created>1699008205569</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1699008205569</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,5 +117,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Renamed the helper class so that it makes more sense, deleted commented code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed the helper class so that it makes more sense, deleted commented code" />
   </component>
 </project>
