@@ -1,16 +1,17 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.BasePage;
 
 import java.time.Duration;
+import java.util.List;
 
 public abstract class BaseTest {
     protected WebDriver driver;
@@ -28,7 +29,19 @@ public abstract class BaseTest {
     public void beforeMethod(){
         driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+
+    @AfterMethod
+    public void afterMethod(){
+        List<WebElement> logoutNavigation = driver.findElements(By.className("oxd-topbar-header"));
+        if (!logoutNavigation.isEmpty()){
+            WebElement nameDropdown = driver.findElement(By.className("oxd-userdropdown-name"));
+            nameDropdown.click();
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/web/index.php/auth/logout']")));
+            WebElement logoutButton = driver.findElement(By.xpath("//a[@href='/web/index.php/auth/logout']"));
+            logoutButton.click();
+        }
     }
 
     @AfterClass
