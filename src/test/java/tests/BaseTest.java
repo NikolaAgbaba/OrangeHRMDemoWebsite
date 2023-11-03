@@ -29,7 +29,7 @@ public abstract class BaseTest {
     public void beforeMethod(){
         driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @AfterMethod
