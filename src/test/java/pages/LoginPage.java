@@ -29,16 +29,13 @@ public class LoginPage extends BasePage{
     @FindBy(className = "oxd-input-field-error-message")
     private WebElement emptyFieldErrorMessage;
 
-    //method for entering the login credentials
-    public void enterLoginCredentials(String username, String password){
+    //method for login
+    public void login(String username, String password){
         usernameField.sendKeys(username);
         passwordField.sendKeys(password);
-    }
-
-    //method for clicking on the login button
-    public void login(){
         loginButton.click();
     }
+
 
     //method for checking if the message for invalid credentials is valid
     public boolean isInvalidCredentialsMessageValid(String invalidCredentialsMessage){

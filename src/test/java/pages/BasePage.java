@@ -20,8 +20,4 @@ public abstract class BasePage {
         this.faker = faker;
         PageFactory.initElements(this.driver, this);
     }
-
-    public boolean isUrlValid(String urlEnd) {
-        return driver.getCurrentUrl().endsWith(urlEnd);
-    }
 }

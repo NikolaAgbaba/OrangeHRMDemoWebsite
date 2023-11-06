@@ -23,8 +23,7 @@ public class AdminPageTests extends BaseTest{
     @BeforeMethod
     public void beforeMethod(){
         super.beforeMethod();
-        loginPage.enterLoginCredentials("Admin", "admin123");
-        loginPage.login();
+        loginPage.login("Admin", "admin123");
         homePage.goToThePage("Admin");
     }
 
