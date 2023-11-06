@@ -21,7 +21,7 @@ public class RedirectionTests extends BaseTest{
     @BeforeMethod
     public void beforeMethod(){
         super.beforeMethod();
-        loginPage.login("Admin", "admin123");
+        loginPage.login(loginPage.readUsername("credentials.txt"), loginPage.readPassword("credentials.txt"));
     }
 
     //going to the Admin page

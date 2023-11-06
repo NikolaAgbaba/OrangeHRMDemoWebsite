@@ -6,17 +6,22 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pages.LoginPage;
 
+import java.io.IOException;
+
 public class LoginTests extends BaseTest{
     private LoginPage loginPage;
-    private final String validAdminUsername = "Admin";
-    private final String validAdminPassword = "admin123";
+    private String validAdminUsername;
+    private String validAdminPassword;
     private final String credentialsErrorMessage = "Invalid credentials";
     private final String requiredErrorMessage = "Required";
+    private String path = "credentials.txt";
 
     @BeforeClass
     public void beforeClass(){
         super.beforeClass();
         loginPage = new LoginPage(driver, wait, faker);
+        validAdminUsername = loginPage.readUsername("credentials.txt");
+        validAdminPassword = loginPage.readPassword("credentials.txt");
     }
 
     //login with valid credentials
@@ -70,5 +75,15 @@ public class LoginTests extends BaseTest{
         softAssert.assertEquals(driver.getCurrentUrl(), expectedUrl);
         softAssert.assertTrue(loginPage.isEmptyFieldErrorMessageValid(requiredErrorMessage), "Required");
         softAssert.assertAll();
+    }
+
+    @Test
+    public void readUsername(){
+        loginPage.readUsername(path);
+    }
+
+    @Test
+    public void readPassword(){
+        loginPage.readPassword(path);
     }
 }

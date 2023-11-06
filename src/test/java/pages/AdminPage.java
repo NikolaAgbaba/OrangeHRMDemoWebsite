@@ -103,6 +103,7 @@ public class AdminPage extends BasePage{
 
     //method for adding a job title
     public void addAJobTitle(String jobTitle){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-button-icon")));
         addJobButton.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[1]/div/div[2]/input")));
         jobTitleInputField.sendKeys(jobTitle);
@@ -128,6 +129,7 @@ public class AdminPage extends BasePage{
 
     //method for deleting the job
     public void deleteTheJob(String jobName){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
         for (WebElement el: jobsList){
             if (el.getText().contains(jobName)){
                 el.findElement(By.className("bi-trash")).click();
@@ -140,6 +142,7 @@ public class AdminPage extends BasePage{
 
     //method for editing the job
     public void editTheJob(String jobName){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
         for (WebElement el: jobsList){
             if (el.getText().contains(jobName)){
                 el.findElement(By.className("bi-pencil-fill")).click();
@@ -153,6 +156,7 @@ public class AdminPage extends BasePage{
 
     //getting the message text
     public String getMessageText(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"oxd-toaster_1\"]/div/div[1]/div[2]/p[1]")));
         return savedMessage.getText();
     }
 }
