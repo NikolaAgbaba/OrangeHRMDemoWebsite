@@ -51,6 +51,18 @@ public class LeavePage extends BasePage {
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div[2]/span")
     private WebElement selectedStatusFilter;
 
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[7]")
+    private List<WebElement> leaveStatusList;
+
+    @FindBy(className = "oxd-table-loader")
+    private WebElement tableLoader;
+
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/div[2]/div/div/div[3]")
+    List<WebElement> employeeNamesList;
+
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[2]/div/div[1]/div/div[2]/div/div/input")
+    private WebElement employeeNameInputField;
+
     //method for searching by the date
     public void searchByDate(String fromDateValue, String toDateValue) {
         fromDateInputField.click();
@@ -93,7 +105,7 @@ public class LeavePage extends BasePage {
         return isBeginningDateValid;
     }
 
-    //method for selecting a leaveStatus
+    //method for searching by the leave status
     public void selectLeaveStatus(String leaveStatus){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-form")));
         xButtonForPendingApproval.click();
@@ -115,6 +127,11 @@ public class LeavePage extends BasePage {
                 leaveStatusDropdown.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
                 break;
         }
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         searchButton.click();
     }
 
@@ -122,5 +139,45 @@ public class LeavePage extends BasePage {
     public String getSelectedStatus(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[1]/div[2]/form/div[1]/div/div[3]/div/div[2]/div/div[2]/span")));
         return selectedStatusFilter.getText();
+    }
+
+    //method for checking if all the leaves have selected leave status
+    public boolean checkLeavesBySelectedStatus(String selectStatus){
+        boolean status = true;
+        selectLeaveStatus(selectStatus);
+        String selectedStatus = getSelectedStatus();
+        for (WebElement el: leaveStatusList){
+            if (!el.getText().contains(selectedStatus)){
+                status = false;
+            }
+        }
+        return status;
+    }
+
+    //method for searching by the employee name and checking if only leaves for that employee are present in the list
+    public boolean searchByEmployeeName(){
+        boolean isEmployeeValid = true;
+        String employeeName = "";
+        int desiredEmployee = (int)(Math.random() * (employeeNamesList.size() - 2) + 1);
+        System.out.println(desiredEmployee);
+        for (int i = 0; i < employeeNamesList.size(); i++){
+            employeeName = employeeNamesList.get(desiredEmployee).getText();
+            break;
+        }
+        employeeNameInputField.sendKeys(employeeName);
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        employeeNameInputField.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+        searchButton.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-table-header")));
+        for (WebElement el: employeeNamesList){
+            if (!el.getText().contains(employeeName)){
+                isEmployeeValid = false;
+            }
+        }
+        return isEmployeeValid;
     }
 }

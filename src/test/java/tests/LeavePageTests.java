@@ -44,10 +44,15 @@ public class LeavePageTests extends BaseTest{
         }
     }
 
-    //checking if the leaves can be filtered by the leave status
+    //checking if leaves can be filtered by the leave status
     @Test
     public void filterByTheLeaveStatus(){
-        leavePage.selectLeaveStatus("Scheduled");
+        Assert.assertTrue(leavePage.checkLeavesBySelectedStatus("Pending Approval"));
+    }
 
+    //checking if leaves can be filtered by the employee name
+    @Test
+    public void filterByTheEmployeeName(){
+        Assert.assertTrue(leavePage.searchByEmployeeName());
     }
 }

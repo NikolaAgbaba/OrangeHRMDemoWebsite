@@ -103,8 +103,6 @@ public class PIMPage extends BasePage {
             break;
         }
         employeeNameInputField.sendKeys(employeeName, Keys.ARROW_DOWN, Keys.ENTER);
-//        employeeNameInputField.sendKeys(Keys.ARROW_DOWN);
-//        employeeNameInputField.sendKeys(Keys.ENTER);
         searchButton.click();
         for (String st: employeesFullNamesList()){
             if (st.contains(employeeName)){
@@ -118,7 +116,7 @@ public class PIMPage extends BasePage {
     public boolean searchRandomEmployeeById() {
         String employeeId = "";
         boolean isEmployeePresent = false;
-        int desiredEmployee = (int)(Math.random() * (employeeIdsList.size() - 1) + 1);
+        int desiredEmployee = (int)(Math.random() * (employeeIdsList.size() - 2) + 1);
         for (int i = 0; i < employeeIdsList.size(); i++){
             employeeId = employeeIdsList.get(desiredEmployee).getText();
             break;
@@ -171,8 +169,6 @@ public class PIMPage extends BasePage {
         employeeListNavButton.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-table-card")));
         employeeNameInputField.sendKeys(employeeName, Keys.ARROW_DOWN, Keys.ENTER);
-//        employeeNameInputField.sendKeys(Keys.ARROW_DOWN);
-//        employeeNameInputField.sendKeys(Keys.ENTER);
         searchButton.click();
         for (String st: employeesFullNamesList()){
             if (st.contains(employeeName)){
