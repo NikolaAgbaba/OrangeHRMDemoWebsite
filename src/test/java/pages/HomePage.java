@@ -19,6 +19,13 @@ public class HomePage extends BasePage{
     @FindBy(className = "oxd-main-menu-item")
     private List<WebElement> navigationItems;
 
+    @FindBy(className = "oxd-userdropdown-name")
+    private WebElement nameDropdown;
+
+    @FindBy(xpath = "//a[@href='/web/index.php/auth/logout']")
+    private WebElement logoutButton;
+
+    //method for navigating through the pages
     public void goToThePage(String elementName){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-main-menu")));
         for (WebElement el: navigationItems) {
@@ -27,5 +34,12 @@ public class HomePage extends BasePage{
                 break;
             }
         }
+    }
+
+    //method for logging out
+    public void logout(){
+        nameDropdown.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/web/index.php/auth/logout']")));
+        logoutButton.click();
     }
 }

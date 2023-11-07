@@ -39,6 +39,9 @@ public class PIMPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[3]/div/div[2]/div/div/div[2]")
     private List<WebElement> employeeIdsList;
 
+    @FindBy(className = "bi-trash")
+    private WebElement deleteButton;
+
     @FindBy(className = "orangehrm-left-space")
     private WebElement searchButton;
 
@@ -72,7 +75,13 @@ public class PIMPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]/a")
     private WebElement employeeListNavButton;
 
+    @FindBy(className = "oxd-button--label-danger")
+    private WebElement deleteConfirmationButton;
 
+    //getter for employees list
+    public List<WebElement> getEmployeesList() {
+        return employeesList;
+    }
 
     //method for returning the list of all employees
     public List<String> employeesFullNamesList() {
@@ -93,9 +102,9 @@ public class PIMPage extends BasePage {
             employeeName = employeesFullNamesList().get(desiredEmployee);
             break;
         }
-        employeeNameInputField.sendKeys(employeeName);
-        employeeNameInputField.sendKeys(Keys.ARROW_DOWN);
-        employeeNameInputField.sendKeys(Keys.ENTER);
+        employeeNameInputField.sendKeys(employeeName, Keys.ARROW_DOWN, Keys.ENTER);
+//        employeeNameInputField.sendKeys(Keys.ARROW_DOWN);
+//        employeeNameInputField.sendKeys(Keys.ENTER);
         searchButton.click();
         for (String st: employeesFullNamesList()){
             if (st.contains(employeeName)){
@@ -124,7 +133,7 @@ public class PIMPage extends BasePage {
         return isEmployeePresent;
     }
 
-    //method for adding the new employee and checking if that employee is present
+    //method for adding the new employee
     public void addEmployee(String firstName, String lastName, String id){
         addEmployeeButton.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-card-container")));
@@ -136,8 +145,21 @@ public class PIMPage extends BasePage {
     }
 
     //method for adding the new employee and creating the login credentials for that employee
+    public void addEmployeeAndCreateLoginCredentials(String firstName, String lastName, String id, String username, String password, String confirmPassword) {
+        addEmployeeButton.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-card-container")));
+        firstNameField.sendKeys(firstName);
+        lastNameField.sendKeys(lastName);
+        idInputField.clear();
+        idInputField.sendKeys(id);
+        createLoginDetailsToggleButton.click();
+        usernameField.sendKeys(username);
+        passwordField.sendKeys(password);
+        confirmPasswordField.sendKeys(confirmPassword);
+        saveButton.click();
+    }
 
-    //method for getting the message for created employee
+    //method for getting the message for created or deleted employee
     public String getMessageText(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"oxd-toaster_1\"]/div/div[1]/div[2]/p[1]")));
         return savedMessage.getText();
@@ -148,9 +170,9 @@ public class PIMPage extends BasePage {
         boolean isEmployeePresent = false;
         employeeListNavButton.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-table-card")));
-        employeeNameInputField.sendKeys(employeeName);
-        employeeNameInputField.sendKeys(Keys.ARROW_DOWN);
-        employeeNameInputField.sendKeys(Keys.ENTER);
+        employeeNameInputField.sendKeys(employeeName, Keys.ARROW_DOWN, Keys.ENTER);
+//        employeeNameInputField.sendKeys(Keys.ARROW_DOWN);
+//        employeeNameInputField.sendKeys(Keys.ENTER);
         searchButton.click();
         for (String st: employeesFullNamesList()){
             if (st.contains(employeeName)){
@@ -158,5 +180,13 @@ public class PIMPage extends BasePage {
             }
         }
         return isEmployeePresent;
+    }
+
+    //method for deleting the employee
+    public void deleteTheEmployee(){
+        searchRandomEmployeeById();
+        deleteButton.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-button--label-danger")));
+        deleteConfirmationButton.click();
     }
 }
