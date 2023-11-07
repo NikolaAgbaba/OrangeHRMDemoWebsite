@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="Renamed the helper class so that it makes more sense, deleted commented code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/PIMPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/PIMPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PIMPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PIMPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,8 +67,8 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.tests">
-    <configuration name="AdminPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LeavePageTests.filterByTheLeaveStatus">
+    <configuration name="LeavePageTests.checkDates" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -80,42 +77,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AdminPageTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PIMPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="VegaITProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.PIMPageTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PIMPageTests.addTheEmployeeAndCreateCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="VegaITProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.PIMPageTests" />
-      <option name="METHOD_NAME" value="addTheEmployeeAndCreateCredentials" />
+      <option name="MAIN_CLASS_NAME" value="tests.LeavePageTests" />
+      <option name="METHOD_NAME" value="checkDates" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -123,7 +86,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PIMPageTests.deleteTheEmployee" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LeavePageTests.filterByTheLeaveStatus" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -132,8 +95,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.PIMPageTests" />
-      <option name="METHOD_NAME" value="deleteTheEmployee" />
+      <option name="MAIN_CLASS_NAME" value="tests.LeavePageTests" />
+      <option name="METHOD_NAME" value="filterByTheLeaveStatus" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -141,7 +104,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LeavePageTests.isDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -150,7 +113,45 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="MAIN_CLASS_NAME" value="tests.LeavePageTests" />
+      <option name="METHOD_NAME" value="isDisplayed" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LeavePageTests.printDates" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="VegaITProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LeavePageTests" />
+      <option name="METHOD_NAME" value="printDates" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LeavePageTests.test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="VegaITProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LeavePageTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -159,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.tests" />
-        <item itemvalue="TestNG.PIMPageTests" />
-        <item itemvalue="TestNG.PIMPageTests.deleteTheEmployee" />
-        <item itemvalue="TestNG.PIMPageTests.addTheEmployeeAndCreateCredentials" />
-        <item itemvalue="TestNG.AdminPageTests" />
+        <item itemvalue="TestNG.LeavePageTests.filterByTheLeaveStatus" />
+        <item itemvalue="TestNG.LeavePageTests.isDisplayed" />
+        <item itemvalue="TestNG.LeavePageTests.checkDates" />
+        <item itemvalue="TestNG.LeavePageTests.printDates" />
+        <item itemvalue="TestNG.LeavePageTests.test" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +180,7 @@
       <workItem from="1698941048405" duration="6000" />
       <workItem from="1698998577984" duration="8162000" />
       <workItem from="1699257624119" duration="27056000" />
-      <workItem from="1699344027707" duration="4979000" />
+      <workItem from="1699344027707" duration="13591000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
       <option name="closed" value="true" />
