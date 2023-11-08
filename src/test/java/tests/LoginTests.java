@@ -25,19 +25,16 @@ public class LoginTests extends BaseTest{
     //login with valid credentials
     @Test
     public void loginWithValidCredentials(){
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
         loginPage.login(validAdminUsername, validAdminPassword);
-        Assert.assertEquals(driver.getCurrentUrl(), expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
     }
 
     //login with invalid username and a valid password
     @Test
     public void invalidUsernameAndValidPasswordLogin(){
         SoftAssert softAssert = new SoftAssert();
-        String invalidUsername = faker.name().username();
-        String expectedUrl = loginPage.getUrl();
-        loginPage.login(invalidUsername, validAdminPassword);
-        softAssert.assertEquals(driver.getCurrentUrl(), expectedUrl);
+        loginPage.login(faker.name().username(), validAdminPassword);
+        softAssert.assertEquals(driver.getCurrentUrl(), loginPage.getUrl());
         softAssert.assertTrue(loginPage.isInvalidCredentialsMessageValid(credentialsErrorMessage), "Invalid credentials message isn't valid");
         softAssert.assertAll();
     }
@@ -46,10 +43,8 @@ public class LoginTests extends BaseTest{
     @Test
     public void validUsernameAndInvalidPasswordLogin(){
         SoftAssert softAssert = new SoftAssert();
-        String invalidPassword = faker.internet().password();
-        String expectedUrl = loginPage.getUrl();
-        loginPage.login(validAdminUsername, invalidPassword);
-        softAssert.assertEquals(driver.getCurrentUrl(), expectedUrl);
+        loginPage.login(validAdminUsername, faker.internet().password());
+        softAssert.assertEquals(driver.getCurrentUrl(), loginPage.getUrl());
         softAssert.assertTrue(loginPage.isInvalidCredentialsMessageValid(credentialsErrorMessage), "Invalid credentials message isn't valid");
         softAssert.assertAll();
     }
@@ -58,9 +53,8 @@ public class LoginTests extends BaseTest{
     @Test
     public void emptyUsernameFieldLogin(){
         SoftAssert softAssert = new SoftAssert();
-        String expectedUrl = loginPage.getUrl();
         loginPage.login("", validAdminPassword);
-        softAssert.assertEquals(driver.getCurrentUrl(), expectedUrl);
+        softAssert.assertEquals(driver.getCurrentUrl(), loginPage.getUrl());
         softAssert.assertTrue(loginPage.isEmptyFieldErrorMessageValid(requiredErrorMessage), "Required");
         softAssert.assertAll();
     }
@@ -68,9 +62,8 @@ public class LoginTests extends BaseTest{
     @Test
     public void emptyPasswordFieldLogin(){
         SoftAssert softAssert = new SoftAssert();
-        String expectedUrl = loginPage.getUrl();
         loginPage.login(validAdminUsername, "");
-        softAssert.assertEquals(driver.getCurrentUrl(), expectedUrl);
+        softAssert.assertEquals(driver.getCurrentUrl(), loginPage.getUrl());
         softAssert.assertTrue(loginPage.isEmptyFieldErrorMessageValid(requiredErrorMessage), "Required");
         softAssert.assertAll();
     }

@@ -80,9 +80,8 @@ public class PIMPageTests extends BaseTest{
     @Test
     public void deleteTheEmployee(){
         SoftAssert softAssert = new SoftAssert();
-        String expectedMessage = "Success";
         pimPage.deleteTheEmployee();
-        softAssert.assertEquals(pimPage.getMessageText(), expectedMessage);
+        softAssert.assertEquals(pimPage.getMessageText(), "Success");
         softAssert.assertTrue(pimPage.getEmployeesList().isEmpty());
         softAssert.assertAll();
     }

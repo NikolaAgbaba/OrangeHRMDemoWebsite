@@ -25,90 +25,70 @@ public class RedirectionTests extends BaseTest{
     @Test
     public void navigateToAdminPage(){
         homePage.goToThePage("Admin");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers");
     }
 
     //going to the PIM page
     @Test
     public void navigateToPIMPage(){
         homePage.goToThePage("PIM");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList");
     }
 
     //going to the Leave page
     @Test
     public void navigateToLeavePage(){
         homePage.goToThePage("Leave");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList");
     }
 
     //going to the Time page
     @Test
     public void navigateToTimePage(){
         homePage.goToThePage("Time");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/time/viewEmployeeTimesheet";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/time/viewEmployeeTimesheet");
     }
 
     //going to the Recruitment page
     @Test
     public void navigateToRecruitmentPage(){
         homePage.goToThePage("Recruitment");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates");
     }
 
     //going to the My Info page
     @Test
     public void navigateToMyInfoPage(){
         homePage.goToThePage("My Info");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/7";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/7");
     }
 
     //going to the Performance page
     @Test
     public void navigateToPerformancePage(){
         homePage.goToThePage("Performance");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/performance/searchEvaluatePerformanceReview";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/performance/searchEvaluatePerformanceReview");
     }
 
     //going to the Dashboard page
     @Test
     public void navigateToDashboardPage(){
         homePage.goToThePage("Dashboard");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
     }
 
     //going to the Directory page
     @Test
     public void navigateToDirectoryPage(){
         homePage.goToThePage("Directory");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory");
     }
 
     //going to the Maintenance page
     @Test
     public void navigateToMaintenancePage(){
         homePage.goToThePage("Maintenance");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/maintenance/purgeEmployee";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/maintenance/purgeEmployee");
         driver.navigate().back();
     }
 
@@ -116,17 +96,13 @@ public class RedirectionTests extends BaseTest{
     @Test
     public void navigateToClaimPage(){
         homePage.goToThePage("Claim");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/claim/viewAssignClaim";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/claim/viewAssignClaim");
     }
 
     //going to the Admin page
     @Test
     public void navigateToBuzzPage(){
         homePage.goToThePage("Buzz");
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz";
-        String actualUrl = driver.getCurrentUrl();
-        Assert.assertEquals(actualUrl, expectedUrl);
+        Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz");
     }
 }

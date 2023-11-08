@@ -42,10 +42,9 @@ public class AdminPageTests extends BaseTest{
     @Test (priority = 2)
     public void addANewJobTitle(){
         SoftAssert softAssert = new SoftAssert();
-        String expectedMessage = "Success";
         adminPage.jobDropdownNavigation("Job", "Job Titles");
         adminPage.addAJobTitle(jobTitle);
-        softAssert.assertEquals(adminPage.getMessageText(), expectedMessage);
+        softAssert.assertEquals(adminPage.getMessageText(), "Success");
         softAssert.assertTrue(adminPage.isJobPresent(jobTitle));
         softAssert.assertAll();
     }
@@ -54,10 +53,9 @@ public class AdminPageTests extends BaseTest{
     @Test (priority = 4)
     public void deleteTheJob(){
         SoftAssert softAssert = new SoftAssert();
-        String expectedMessage = "Success";
         adminPage.jobDropdownNavigation("Job", "Job Titles");
         adminPage.deleteTheJob(editedJob);
-        softAssert.assertEquals(adminPage.getMessageText(), expectedMessage);
+        softAssert.assertEquals(adminPage.getMessageText(), "Success");
         softAssert.assertTrue(!adminPage.isJobPresent(editedJob));
         softAssert.assertAll();
     }
@@ -66,10 +64,9 @@ public class AdminPageTests extends BaseTest{
     @Test (priority = 3)
     public void editTheJob(){
         SoftAssert softAssert = new SoftAssert();
-        String expectedMessage = "Success";
         adminPage.jobDropdownNavigation("Job", "Job Titles");
         adminPage.editTheJob(jobTitle);
-        softAssert.assertEquals(adminPage.getMessageText(), expectedMessage);
+        softAssert.assertEquals(adminPage.getMessageText(), "Success");
         softAssert.assertTrue(adminPage.isJobPresent(editedJob));
     }
 }
