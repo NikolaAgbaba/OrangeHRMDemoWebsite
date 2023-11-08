@@ -95,6 +95,9 @@ public class TimePage extends BasePage{
     @FindBy(xpath = "//*[@id=\"oxd-toaster_1\"]/div/div[1]/div[2]/p[1]")
     private WebElement savedMessage;
 
+    @FindBy(className = "orangehrm-timesheet-table-body-row")
+    private WebElement tableRow;
+
 
     //method for navigating through the timesheets dropdown menu
     public void timesheetsDropdownNavigation(String navigationButtonName, String dropdownElementName){
@@ -172,8 +175,35 @@ public class TimePage extends BasePage{
         fillTheTimeSheet(projectName);
     }
 
+    //method for editing a timesheet without saving it (in order to be able to get the input values)
+    public void editATimeSheetWithoutSaving(){
+        projectsDropdownNavigation("Project Info", "Projects");
+        String projectName = getARandomProjectName();
+        timesheetsDropdownNavigation("Timesheets", "My Timesheets");
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-footer--options")));
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        while(!tableRow.isDisplayed()) {
+            leftNavigationButton.click();
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+//        everyButton.click();
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/form/div[3]/div[2]/button[1]")));
+        editCreatedButton.click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/form/div[2]/table/tbody/tr[1]/td[1]/div/div[2]/div/div/input")));
+        fillTheTimeSheet(projectName);
+    }
+
     //method for filling the timesheet
     public void fillTheTimeSheet(String projectName){
+        projectNameInputField.sendKeys(Keys.CONTROL + "a");
         projectNameInputField.sendKeys(projectName);
         try {
             Thread.sleep(1500);
@@ -191,6 +221,7 @@ public class TimePage extends BasePage{
         for (WebElement el: datesList){
             int hours = (int)(Math.random() * 24);
             el.click();
+            el.sendKeys(Keys.CONTROL + "a");
             if (hours >= 10) {
                 el.sendKeys(hours + ":00");
             }else{
@@ -295,9 +326,13 @@ public class TimePage extends BasePage{
     }
 
     //method comparing the entered data and data in the saved timesheet
-    public boolean verifyTimesheetValues(){
+    public boolean verifyTimesheetValues(String createOrEditTheTimesheet){
         boolean timesheetValues = true;
-        createATimeSheetWithoutSaving();
+        if (createOrEditTheTimesheet.equals("Create a timesheet")) {
+            createATimeSheetWithoutSaving();
+        }else if(createOrEditTheTimesheet.equals("Edit a timesheet")){
+            editATimeSheetWithoutSaving();
+        }
         String enteredProject = getProjectEnteredValue();
         String enteredActivity = getActivityEnteredValue();
         String enteredMondayValue = getMondayEnteredValue();

@@ -30,9 +30,15 @@ public class TimePageTests extends BaseTest {
         homePage.goToThePage("Time");
     }
 
-    //checking if the timesheet is saved and the values in the timesheet are the same as in the input fields
+    //checking if the timesheet is added and the values in the timesheet are the same as in the input fields
     @Test
-    public void saveTheTimesheet() {
-        Assert.assertTrue(timePage.verifyTimesheetValues());
+    public void addTheTimesheet() {
+        Assert.assertTrue(timePage.verifyTimesheetValues("Create a timesheet"));
+    }
+
+    //checking if the timesheet is edited and the values in the timesheet are the same as in the input fields
+    @Test
+    public void editTheTimesheet(){
+        Assert.assertTrue(timePage.verifyTimesheetValues("Edit a timesheet"));
     }
 }
