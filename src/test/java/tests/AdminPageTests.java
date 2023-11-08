@@ -11,7 +11,6 @@ import pages.LoginPage;
 
 public class AdminPageTests extends BaseTest{
     private AdminPage adminPage;
-    private LoginPage loginPage;
     private HomePage homePage;
     private String jobTitle;
     private String editedJob;
@@ -20,7 +19,6 @@ public class AdminPageTests extends BaseTest{
     public void beforeClass(){
         super.beforeClass();
         adminPage = new AdminPage(driver, wait, faker);
-        loginPage = new LoginPage(driver, wait, faker);
         homePage = new HomePage(driver, wait, faker);
         jobTitle = faker.job().title();
         editedJob =  jobTitle + " - edited job";
@@ -29,7 +27,7 @@ public class AdminPageTests extends BaseTest{
     @BeforeMethod
     public void beforeMethod(){
         super.beforeMethod();
-        loginPage.login(loginPage.readUsername("credentials.txt"), loginPage.readPassword("credentials.txt"));
+        loginPage.login(loginPage.getValidUsername(), loginPage.getValidPassword());
         homePage.goToThePage("Admin");
     }
 

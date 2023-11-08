@@ -1,6 +1,7 @@
 package pages;
 
 import com.github.javafaker.Faker;
+import framework.Configuration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +34,36 @@ public class LoginPage extends BasePage{
 
     @FindBy(className = "oxd-input-field-error-message")
     private WebElement emptyFieldErrorMessage;
+
+    //setting a valid email
+    public String getValidUsername(){
+        try {
+            Configuration.init();
+            return Configuration.validUsername;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    //getting a valid password
+    public String getValidPassword(){
+        try {
+            Configuration.init();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return Configuration.validPassword;
+    }
+
+    //getting the url
+    public String getUrl(){
+        try {
+            Configuration.init();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return Configuration.url;
+    }
 
     //method for login
     public void login(String username, String password){

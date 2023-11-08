@@ -1,5 +1,6 @@
 package tests;
 
+import framework.Configuration;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -9,19 +10,18 @@ import pages.LoginPage;
 import java.io.IOException;
 
 public class LoginTests extends BaseTest{
-    private LoginPage loginPage;
     private String validAdminUsername;
     private String validAdminPassword;
     private final String credentialsErrorMessage = "Invalid credentials";
     private final String requiredErrorMessage = "Required";
-    private String path = "credentials.txt";
+    private String path = "credentials.properties";
+
 
     @BeforeClass
     public void beforeClass(){
         super.beforeClass();
-        loginPage = new LoginPage(driver, wait, faker);
-        validAdminUsername = loginPage.readUsername("credentials.txt");
-        validAdminPassword = loginPage.readPassword("credentials.txt");
+        validAdminUsername = loginPage.getValidUsername();
+        validAdminPassword = loginPage.getValidPassword();
     }
 
     //login with valid credentials
@@ -37,7 +37,7 @@ public class LoginTests extends BaseTest{
     public void invalidUsernameAndValidPasswordLogin(){
         SoftAssert softAssert = new SoftAssert();
         String invalidUsername = faker.name().username();
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
+        String expectedUrl = loginPage.getUrl();
         loginPage.login(invalidUsername, validAdminPassword);
         softAssert.assertEquals(driver.getCurrentUrl(), expectedUrl);
         softAssert.assertTrue(loginPage.isInvalidCredentialsMessageValid(credentialsErrorMessage), "Invalid credentials message isn't valid");
@@ -49,7 +49,7 @@ public class LoginTests extends BaseTest{
     public void validUsernameAndInvalidPasswordLogin(){
         SoftAssert softAssert = new SoftAssert();
         String invalidPassword = faker.internet().password();
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
+        String expectedUrl = loginPage.getUrl();
         loginPage.login(validAdminUsername, invalidPassword);
         softAssert.assertEquals(driver.getCurrentUrl(), expectedUrl);
         softAssert.assertTrue(loginPage.isInvalidCredentialsMessageValid(credentialsErrorMessage), "Invalid credentials message isn't valid");
@@ -60,7 +60,7 @@ public class LoginTests extends BaseTest{
     @Test
     public void emptyUsernameFieldLogin(){
         SoftAssert softAssert = new SoftAssert();
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
+        String expectedUrl = loginPage.getUrl();
         loginPage.login("", validAdminPassword);
         softAssert.assertEquals(driver.getCurrentUrl(), expectedUrl);
         softAssert.assertTrue(loginPage.isEmptyFieldErrorMessageValid(requiredErrorMessage), "Required");
@@ -70,20 +70,21 @@ public class LoginTests extends BaseTest{
     @Test
     public void emptyPasswordFieldLogin(){
         SoftAssert softAssert = new SoftAssert();
-        String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
+        String expectedUrl = loginPage.getUrl();
         loginPage.login(validAdminUsername, "");
         softAssert.assertEquals(driver.getCurrentUrl(), expectedUrl);
         softAssert.assertTrue(loginPage.isEmptyFieldErrorMessageValid(requiredErrorMessage), "Required");
         softAssert.assertAll();
     }
 
-    @Test
-    public void readUsername(){
-        loginPage.readUsername(path);
-    }
-
-    @Test
-    public void readPassword(){
-        loginPage.readPassword(path);
-    }
+//    @Test
+//    public void readUsername(){
+//        loginPage.readUsername(path);
+//    }
+//
+//    @Test
+//    public void readPassword(){
+//        loginPage.readPassword(path);
+//    }
+//
 }

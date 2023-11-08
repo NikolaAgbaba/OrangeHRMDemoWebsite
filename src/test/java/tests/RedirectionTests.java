@@ -9,19 +9,17 @@ import pages.LoginPage;
 
 public class RedirectionTests extends BaseTest{
     private HomePage homePage;
-    private LoginPage loginPage;
 
     @BeforeClass
     public void beforeClass(){
         super.beforeClass();
         homePage = new HomePage(driver, wait, faker);
-        loginPage = new LoginPage(driver, wait, faker);
     }
 
     @BeforeMethod
     public void beforeMethod(){
         super.beforeMethod();
-        loginPage.login(loginPage.readUsername("credentials.txt"), loginPage.readPassword("credentials.txt"));
+        loginPage.login(loginPage.getValidUsername(), loginPage.getValidPassword());
     }
 
     //going to the Admin page

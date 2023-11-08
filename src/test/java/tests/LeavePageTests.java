@@ -14,7 +14,6 @@ import java.util.Date;
 
 public class LeavePageTests extends BaseTest{
     private LeavePage leavePage;
-    private LoginPage loginPage;
     private HomePage homePage;
     private SimpleDateFormat dateFormat;
 
@@ -22,7 +21,6 @@ public class LeavePageTests extends BaseTest{
     public void beforeClass(){
         super.beforeClass();
         leavePage = new LeavePage(dateFormat, driver, wait, faker);
-        loginPage = new LoginPage(driver, wait, faker);
         homePage = new HomePage(driver, wait, faker);
         dateFormat = new SimpleDateFormat("yyyy-MM-dd");
     }
@@ -30,7 +28,7 @@ public class LeavePageTests extends BaseTest{
     @BeforeMethod
     public void beforeMethod(){
         super.beforeMethod();
-        loginPage.login(loginPage.readUsername("credentials.txt"), loginPage.readPassword("credentials.txt"));
+        loginPage.login(loginPage.getValidUsername(), loginPage.getValidPassword());
         homePage.goToThePage("Leave");
     }
 

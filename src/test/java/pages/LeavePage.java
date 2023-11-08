@@ -159,7 +159,6 @@ public class LeavePage extends BasePage {
         boolean isEmployeeValid = true;
         String employeeName = "";
         int desiredEmployee = (int)(Math.random() * (employeeNamesList.size() - 2) + 1);
-        System.out.println(desiredEmployee);
         for (int i = 0; i < employeeNamesList.size(); i++){
             employeeName = employeeNamesList.get(desiredEmployee).getText();
             break;

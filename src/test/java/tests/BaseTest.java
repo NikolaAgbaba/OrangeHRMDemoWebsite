@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 import pages.BasePage;
+import pages.LoginPage;
 
 import java.time.Duration;
 import java.util.List;
@@ -17,17 +18,19 @@ public abstract class BaseTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected Faker faker;
+    protected LoginPage loginPage;
 
     @BeforeClass
     public void beforeClass(){
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         faker = new Faker();
+        loginPage = new LoginPage(driver, wait, faker);
     }
 
     @BeforeMethod
     public void beforeMethod(){
-        driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        driver.navigate().to(loginPage.getUrl());
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }

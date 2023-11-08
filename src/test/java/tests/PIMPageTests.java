@@ -12,7 +12,6 @@ import pages.PIMPage;
 public class PIMPageTests extends BaseTest{
     private PIMPage pimPage;
     private HomePage homePage;
-    private LoginPage loginPage;
     private String expectedMessage;
     private String firstName;
     private String lastName;
@@ -26,13 +25,12 @@ public class PIMPageTests extends BaseTest{
         super.beforeClass();
         pimPage = new PIMPage(driver, wait, faker);
         homePage = new HomePage(driver, wait, faker);
-        loginPage = new LoginPage(driver, wait, faker);
     }
 
     @BeforeMethod
     public void beforeMethod(){
         super.beforeMethod();
-        loginPage.login(loginPage.readUsername("credentials.txt"), loginPage.readPassword("credentials.txt"));
+        loginPage.login(loginPage.getValidUsername(), loginPage.getValidPassword());
         homePage.goToThePage("PIM");
         expectedMessage = "Success";
         firstName = faker.name().firstName();
