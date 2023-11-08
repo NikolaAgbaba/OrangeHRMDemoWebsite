@@ -5,7 +5,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
-import pages.LoginPage;
 
 public class RedirectionTests extends BaseTest{
     private HomePage homePage;
@@ -24,7 +23,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the Admin page
     @Test
-    public void goToAdminPage(){
+    public void navigateToAdminPage(){
         homePage.goToThePage("Admin");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewSystemUsers";
         String actualUrl = driver.getCurrentUrl();
@@ -33,7 +32,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the PIM page
     @Test
-    public void goToPIMPage(){
+    public void navigateToPIMPage(){
         homePage.goToThePage("PIM");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList";
         String actualUrl = driver.getCurrentUrl();
@@ -42,7 +41,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the Leave page
     @Test
-    public void goToLeavePage(){
+    public void navigateToLeavePage(){
         homePage.goToThePage("Leave");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/leave/viewLeaveList";
         String actualUrl = driver.getCurrentUrl();
@@ -51,7 +50,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the Time page
     @Test
-    public void goToTimePage(){
+    public void navigateToTimePage(){
         homePage.goToThePage("Time");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/time/viewEmployeeTimesheet";
         String actualUrl = driver.getCurrentUrl();
@@ -60,7 +59,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the Recruitment page
     @Test
-    public void goToRecruitmentPage(){
+    public void navigateToRecruitmentPage(){
         homePage.goToThePage("Recruitment");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/recruitment/viewCandidates";
         String actualUrl = driver.getCurrentUrl();
@@ -69,7 +68,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the My Info page
     @Test
-    public void goToMyInfoPage(){
+    public void navigateToMyInfoPage(){
         homePage.goToThePage("My Info");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/7";
         String actualUrl = driver.getCurrentUrl();
@@ -78,7 +77,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the Performance page
     @Test
-    public void goToPerformancePage(){
+    public void navigateToPerformancePage(){
         homePage.goToThePage("Performance");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/performance/searchEvaluatePerformanceReview";
         String actualUrl = driver.getCurrentUrl();
@@ -87,7 +86,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the Dashboard page
     @Test
-    public void goToDashboardPage(){
+    public void navigateToDashboardPage(){
         homePage.goToThePage("Dashboard");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
         String actualUrl = driver.getCurrentUrl();
@@ -96,7 +95,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the Directory page
     @Test
-    public void goToDirectoryPage(){
+    public void navigateToDirectoryPage(){
         homePage.goToThePage("Directory");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/directory/viewDirectory";
         String actualUrl = driver.getCurrentUrl();
@@ -105,7 +104,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the Maintenance page
     @Test
-    public void goToMaintenancePage(){
+    public void navigateToMaintenancePage(){
         homePage.goToThePage("Maintenance");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/maintenance/purgeEmployee";
         String actualUrl = driver.getCurrentUrl();
@@ -115,7 +114,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the Admin page
     @Test
-    public void goToClaimPage(){
+    public void navigateToClaimPage(){
         homePage.goToThePage("Claim");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/claim/viewAssignClaim";
         String actualUrl = driver.getCurrentUrl();
@@ -124,7 +123,7 @@ public class RedirectionTests extends BaseTest{
 
     //going to the Admin page
     @Test
-    public void goToBuzzPage(){
+    public void navigateToBuzzPage(){
         homePage.goToThePage("Buzz");
         String expectedUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz";
         String actualUrl = driver.getCurrentUrl();

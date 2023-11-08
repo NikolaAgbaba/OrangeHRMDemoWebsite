@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="Renamed the helper class so that it makes more sense, deleted commented code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TimePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TimePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TimePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TimePageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RedirectionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RedirectionTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
   }
 }</component>
   <component name="RunManager" selected="TestNG.tests">
-    <configuration name="AdminPageTests.editTheJob" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RecruitmentPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -82,8 +83,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AdminPageTests" />
-      <option name="METHOD_NAME" value="editTheJob" />
+      <option name="MAIN_CLASS_NAME" value="tests.RecruitmentPageTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecruitmentPageTests.deletingTheVacancy" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="VegaITProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.RecruitmentPageTests" />
+      <option name="METHOD_NAME" value="deletingTheVacancy" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -91,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTests.loginWithValidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RecruitmentPageTests.filterTheVacancyByStatus" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -100,8 +118,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.LoginTests" />
-      <option name="METHOD_NAME" value="loginWithValidCredentials" />
+      <option name="MAIN_CLASS_NAME" value="tests.RecruitmentPageTests" />
+      <option name="METHOD_NAME" value="filterTheVacancyByStatus" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -109,7 +127,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TimePageTests.editTheTimesheet" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RecruitmentPageTests.resetVacanciesFilter" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -118,26 +136,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TimePageTests" />
-      <option name="METHOD_NAME" value="editTheTimesheet" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TimePageTests.test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="VegaITProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TimePageTests" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="tests.RecruitmentPageTests" />
+      <option name="METHOD_NAME" value="resetVacanciesFilter" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -164,10 +164,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.tests" />
-        <item itemvalue="TestNG.TimePageTests.editTheTimesheet" />
-        <item itemvalue="TestNG.TimePageTests.test" />
-        <item itemvalue="TestNG.AdminPageTests.editTheJob" />
-        <item itemvalue="TestNG.LoginTests.loginWithValidCredentials" />
+        <item itemvalue="TestNG.RecruitmentPageTests" />
+        <item itemvalue="TestNG.RecruitmentPageTests.resetVacanciesFilter" />
+        <item itemvalue="TestNG.RecruitmentPageTests.filterTheVacancyByStatus" />
+        <item itemvalue="TestNG.RecruitmentPageTests.deletingTheVacancy" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +184,7 @@
       <workItem from="1698998577984" duration="8162000" />
       <workItem from="1699257624119" duration="27056000" />
       <workItem from="1699344027707" duration="27175000" />
-      <workItem from="1699430440439" duration="14665000" />
+      <workItem from="1699430440439" duration="23041000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
       <option name="closed" value="true" />

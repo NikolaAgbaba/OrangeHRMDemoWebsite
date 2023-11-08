@@ -14,8 +14,6 @@ public class LoginTests extends BaseTest{
     private String validAdminPassword;
     private final String credentialsErrorMessage = "Invalid credentials";
     private final String requiredErrorMessage = "Required";
-    private String path = "credentials.properties";
-
 
     @BeforeClass
     public void beforeClass(){
@@ -76,15 +74,4 @@ public class LoginTests extends BaseTest{
         softAssert.assertTrue(loginPage.isEmptyFieldErrorMessageValid(requiredErrorMessage), "Required");
         softAssert.assertAll();
     }
-
-//    @Test
-//    public void readUsername(){
-//        loginPage.readUsername(path);
-//    }
-//
-//    @Test
-//    public void readPassword(){
-//        loginPage.readPassword(path);
-//    }
-//
 }

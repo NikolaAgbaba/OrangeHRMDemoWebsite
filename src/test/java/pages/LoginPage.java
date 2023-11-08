@@ -72,7 +72,6 @@ public class LoginPage extends BasePage{
         loginButton.click();
     }
 
-
     //method for checking if the message for invalid credentials is valid
     public boolean isInvalidCredentialsMessageValid(String invalidCredentialsMessage){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-alert--error")));
@@ -83,63 +82,5 @@ public class LoginPage extends BasePage{
     public boolean isEmptyFieldErrorMessageValid(String requiredFieldMessage){
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-input-field-error-message")));
         return emptyFieldErrorMessage.getText().equals(requiredFieldMessage);
-    }
-
-    //method for reading the credentials from a .txt file
-    public String readUsername(String path){
-        String username = null;
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader(path));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                if (line.startsWith("username: ")) {
-                    username = line.replace("username: ", "");
-                    break; // Exit the loop once the password is found
-                }
-            }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } finally {
-            try {
-                if (reader != null) {
-                    reader.close();
-                }
-            } catch (IOException e) {
-                // Handle any closing errors
-            }
-        }
-        return username;
-    }
-
-
-    public String readPassword(String path) {
-        String password = null;
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader(path));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                if (line.startsWith("password: ")) {
-                    password = line.replace("password: ", "");
-                    break; // Exit the loop once the password is found
-                }
-            }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } finally {
-            try {
-                if (reader != null) {
-                    reader.close();
-                }
-            } catch (IOException e) {
-                // Handle any closing errors
-            }
-        }
-        return password;
     }
 }
