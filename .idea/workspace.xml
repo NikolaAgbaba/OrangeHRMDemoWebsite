@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="Renamed the helper class so that it makes more sense, deleted commented code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DashboardPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DashboardPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.DirectoryPageTests.isExpandedCardDisplayed">
+  <component name="RunManager" selected="TestNG.MaintenancePageTests.isNoteDisplayed">
     <configuration name="DashboardPageTests.areDashboardWidgetsDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
@@ -108,7 +107,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyInfoPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MaintenancePageTests.isAdditionalAuthenticationRequired" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -117,8 +116,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MyInfoPageTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="tests.MaintenancePageTests" />
+      <option name="METHOD_NAME" value="isAdditionalAuthenticationRequired" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaintenancePageTests.isNoteDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="VegaITProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MaintenancePageTests" />
+      <option name="METHOD_NAME" value="isNoteDisplayed" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -142,29 +160,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="VegaITProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.MaintenancePageTests.isNoteDisplayed" />
+        <item itemvalue="TestNG.PerformancePageTests" />
+        <item itemvalue="TestNG.MaintenancePageTests.isAdditionalAuthenticationRequired" />
         <item itemvalue="TestNG.DirectoryPageTests.isExpandedCardDisplayed" />
         <item itemvalue="TestNG.DashboardPageTests.areDashboardWidgetsDisplayed" />
-        <item itemvalue="TestNG.tests" />
-        <item itemvalue="TestNG.MyInfoPageTests" />
-        <item itemvalue="TestNG.PerformancePageTests" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +184,7 @@
       <workItem from="1699257624119" duration="27056000" />
       <workItem from="1699344027707" duration="27175000" />
       <workItem from="1699430440439" duration="26937000" />
-      <workItem from="1699516941297" duration="23619000" />
+      <workItem from="1699516941297" duration="26261000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
       <option name="closed" value="true" />
