@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="Renamed the helper class so that it makes more sense, deleted commented code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AdminPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AdminPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LeavePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LeavePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TimePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TimePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PIMPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PIMPageTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/RedirectionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RedirectionTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,8 +74,8 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.tests">
-    <configuration name="RecruitmentPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.MyInfoPageTests.test">
+    <configuration name="LeavePageTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -84,7 +84,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RecruitmentPageTests" />
+      <option name="MAIN_CLASS_NAME" value="tests.LeavePageTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -92,7 +92,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecruitmentPageTests.filterTheVacancyByStatus" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MyInfoPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -101,44 +101,44 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RecruitmentPageTests" />
-      <option name="METHOD_NAME" value="filterTheVacancyByStatus" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RecruitmentPageTests.resetVacanciesFilter" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="VegaITProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RecruitmentPageTests" />
-      <option name="METHOD_NAME" value="resetVacanciesFilter" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TimePageTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="VegaITProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.TimePageTests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MyInfoPageTests" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyInfoPageTests.goToTheHelpPage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="VegaITProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MyInfoPageTests" />
+      <option name="METHOD_NAME" value="goToTheHelpPage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyInfoPageTests.test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="VegaITProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.MyInfoPageTests" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -163,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.MyInfoPageTests.test" />
         <item itemvalue="TestNG.tests" />
-        <item itemvalue="TestNG.TimePageTests" />
-        <item itemvalue="TestNG.RecruitmentPageTests" />
-        <item itemvalue="TestNG.RecruitmentPageTests.resetVacanciesFilter" />
-        <item itemvalue="TestNG.RecruitmentPageTests.filterTheVacancyByStatus" />
+        <item itemvalue="TestNG.LeavePageTests" />
+        <item itemvalue="TestNG.MyInfoPageTests" />
+        <item itemvalue="TestNG.MyInfoPageTests.goToTheHelpPage" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +184,8 @@
       <workItem from="1698998577984" duration="8162000" />
       <workItem from="1699257624119" duration="27056000" />
       <workItem from="1699344027707" duration="27175000" />
-      <workItem from="1699430440439" duration="26181000" />
+      <workItem from="1699430440439" duration="26937000" />
+      <workItem from="1699516941297" duration="10780000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
       <option name="closed" value="true" />

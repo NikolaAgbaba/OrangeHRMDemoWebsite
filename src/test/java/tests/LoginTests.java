@@ -59,6 +59,7 @@ public class LoginTests extends BaseTest{
         softAssert.assertAll();
     }
 
+    //login while leaving the password field empty
     @Test
     public void emptyPasswordFieldLogin(){
         SoftAssert softAssert = new SoftAssert();

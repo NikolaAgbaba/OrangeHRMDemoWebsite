@@ -154,7 +154,6 @@ public class TimePage extends BasePage{
         projectsDropdownNavigation("Project Info", "Projects");
         String projectName = getARandomProjectName();
         timesheetsDropdownNavigation("Timesheets", "My Timesheets");
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-footer--options")));
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -180,7 +179,6 @@ public class TimePage extends BasePage{
         projectsDropdownNavigation("Project Info", "Projects");
         String projectName = getARandomProjectName();
         timesheetsDropdownNavigation("Timesheets", "My Timesheets");
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-footer--options")));
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -194,8 +192,6 @@ public class TimePage extends BasePage{
                 throw new RuntimeException(e);
             }
         }
-//        everyButton.click();
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/form/div[3]/div[2]/button[1]")));
         editCreatedButton.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/form/div[2]/table/tbody/tr[1]/td[1]/div/div[2]/div/div/input")));
         fillTheTimeSheet(projectName);
@@ -206,14 +202,14 @@ public class TimePage extends BasePage{
         projectNameInputField.sendKeys(Keys.CONTROL + "a");
         projectNameInputField.sendKeys(projectName);
         try {
-            Thread.sleep(1500);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         projectNameInputField.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
         activityDropdownMenu.click();
         try {
-            Thread.sleep(1500);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

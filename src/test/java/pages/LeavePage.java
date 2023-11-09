@@ -85,7 +85,7 @@ public class LeavePage extends BasePage {
     //method for checking if the leaves are being filtered by date
     public boolean filterLeavesByDate(String fromDateValue, String toDateValue) throws ParseException {
         boolean isBeginningDateValid = true;
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-form")));
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
@@ -158,6 +158,7 @@ public class LeavePage extends BasePage {
     public boolean searchByEmployeeName(){
         boolean isEmployeeValid = true;
         String employeeName = "";
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-form")));
         int desiredEmployee = (int)(Math.random() * (employeeNamesList.size() - 2) + 1);
         for (int i = 0; i < employeeNamesList.size(); i++){
             employeeName = employeeNamesList.get(desiredEmployee).getText();
