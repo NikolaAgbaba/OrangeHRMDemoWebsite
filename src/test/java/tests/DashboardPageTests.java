@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -38,6 +39,6 @@ public class DashboardPageTests extends BaseTest{
     //checking if all the widgets are displayed on dashboard page
     @Test
     public void areDashboardWidgetsDisplayed(){
-        dashboardPage.areDashboardElementsDisplayed(widgetTitlesList);
+        Assert.assertTrue(dashboardPage.areDashboardElementsDisplayed(widgetTitlesList));
     }
 }

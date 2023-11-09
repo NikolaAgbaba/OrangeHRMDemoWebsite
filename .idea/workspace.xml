@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="Renamed the helper class so that it makes more sense, deleted commented code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DashboardPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DashboardPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.DashboardPageTests.areDashboardWidgetsDisplayed">
+  <component name="RunManager" selected="TestNG.DirectoryPageTests.isExpandedCardDisplayed">
     <configuration name="DashboardPageTests.areDashboardWidgetsDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
@@ -82,6 +83,24 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.DashboardPageTests" />
       <option name="METHOD_NAME" value="areDashboardWidgetsDisplayed" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DirectoryPageTests.isExpandedCardDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="VegaITProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DirectoryPageTests" />
+      <option name="METHOD_NAME" value="isExpandedCardDisplayed" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -123,24 +142,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PerformancePageTests.addingTheLog" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="VegaITProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.PerformancePageTests" />
-      <option name="METHOD_NAME" value="addingTheLog" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="tests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
@@ -159,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DirectoryPageTests.isExpandedCardDisplayed" />
         <item itemvalue="TestNG.DashboardPageTests.areDashboardWidgetsDisplayed" />
         <item itemvalue="TestNG.tests" />
         <item itemvalue="TestNG.MyInfoPageTests" />
         <item itemvalue="TestNG.PerformancePageTests" />
-        <item itemvalue="TestNG.PerformancePageTests.addingTheLog" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +182,7 @@
       <workItem from="1699257624119" duration="27056000" />
       <workItem from="1699344027707" duration="27175000" />
       <workItem from="1699430440439" duration="26937000" />
-      <workItem from="1699516941297" duration="22290000" />
+      <workItem from="1699516941297" duration="23619000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
       <option name="closed" value="true" />
