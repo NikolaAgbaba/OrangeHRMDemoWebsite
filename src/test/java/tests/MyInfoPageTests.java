@@ -62,7 +62,7 @@ public class MyInfoPageTests extends BaseTest {
 
     //checking if the emergency contact creation can be cancelled
     @Test
-    public void test(){
+    public void cancelEmergencyContactCreation(){
         myInfoPage.navigateThroughMyInfoPages("Emergency Contacts");
         myInfoPage.fillEmergencyContactInfo(name, relationship, mobile);
         myInfoPage.cancelEmergencyContactCreation();
