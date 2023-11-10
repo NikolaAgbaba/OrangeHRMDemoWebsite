@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="Renamed the helper class so that it makes more sense, deleted commented code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AdminPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RecruitmentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RecruitmentPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AdminPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AdminPageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MaintenancePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MaintenancePageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MyInfoPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MyInfoPageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PIMPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PIMPageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PerformancePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PerformancePageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RecruitmentPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RecruitmentPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ClaimPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ClaimPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ClaimPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ClaimPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +72,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.ClaimPageTests">
+  <component name="RunManager" selected="TestNG.tests">
     <configuration name="ClaimPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
@@ -92,6 +84,24 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.ClaimPageTests" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClaimPageTests.changeTheActivityStatus" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="VegaITProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ClaimPageTests" />
+      <option name="METHOD_NAME" value="changeTheActivityStatus" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -110,23 +120,6 @@
       <option name="MAIN_CLASS_NAME" value="tests.ClaimPageTests" />
       <option name="METHOD_NAME" value="deletingMultipleExpenseTypes" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MaintenancePageTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="VegaITProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.MaintenancePageTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -168,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ClaimPageTests" />
-        <item itemvalue="TestNG.ClaimPageTests.deletingMultipleExpenseTypes" />
         <item itemvalue="TestNG.tests" />
+        <item itemvalue="TestNG.ClaimPageTests" />
+        <item itemvalue="TestNG.ClaimPageTests.changeTheActivityStatus" />
+        <item itemvalue="TestNG.ClaimPageTests.deletingMultipleExpenseTypes" />
         <item itemvalue="TestNG.RecruitmentPageTests" />
-        <item itemvalue="TestNG.MaintenancePageTests" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +184,7 @@
       <workItem from="1699344027707" duration="27175000" />
       <workItem from="1699430440439" duration="26937000" />
       <workItem from="1699516941297" duration="26890000" />
-      <workItem from="1699603125929" duration="13025000" />
+      <workItem from="1699603125929" duration="21647000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
       <option name="closed" value="true" />
