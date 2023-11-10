@@ -41,7 +41,6 @@ public class MyInfoPageTests extends BaseTest {
     //checking if the user can change the contact details
     @Test
     public void contactDetailsChanging() {
-        SoftAssert softAssert = new SoftAssert();
         myInfoPage.navigateThroughMyInfoPages("Contact Details");
         myInfoPage.changeContactInfo(city, mobile, workEmail);
         softAssert.assertEquals(myInfoPage.getMessageText(), "Success");

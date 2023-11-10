@@ -32,7 +32,6 @@ public class LoginTests extends BaseTest{
     //login with invalid username and a valid password
     @Test
     public void invalidUsernameAndValidPasswordLogin(){
-        SoftAssert softAssert = new SoftAssert();
         loginPage.login(faker.name().username(), validAdminPassword);
         softAssert.assertEquals(driver.getCurrentUrl(), loginPage.getUrl());
         softAssert.assertTrue(loginPage.isInvalidCredentialsMessageValid(credentialsErrorMessage), "Invalid credentials message isn't valid");
@@ -42,7 +41,6 @@ public class LoginTests extends BaseTest{
     //login with a valid username and invalid password
     @Test
     public void validUsernameAndInvalidPasswordLogin(){
-        SoftAssert softAssert = new SoftAssert();
         loginPage.login(validAdminUsername, faker.internet().password());
         softAssert.assertEquals(driver.getCurrentUrl(), loginPage.getUrl());
         softAssert.assertTrue(loginPage.isInvalidCredentialsMessageValid(credentialsErrorMessage), "Invalid credentials message isn't valid");
@@ -52,7 +50,6 @@ public class LoginTests extends BaseTest{
     //login while leaving the username field empty
     @Test
     public void emptyUsernameFieldLogin(){
-        SoftAssert softAssert = new SoftAssert();
         loginPage.login("", validAdminPassword);
         softAssert.assertEquals(driver.getCurrentUrl(), loginPage.getUrl());
         softAssert.assertTrue(loginPage.isEmptyFieldErrorMessageValid(requiredErrorMessage), "Required");
@@ -62,7 +59,6 @@ public class LoginTests extends BaseTest{
     //login while leaving the password field empty
     @Test
     public void emptyPasswordFieldLogin(){
-        SoftAssert softAssert = new SoftAssert();
         loginPage.login(validAdminUsername, "");
         softAssert.assertEquals(driver.getCurrentUrl(), loginPage.getUrl());
         softAssert.assertTrue(loginPage.isEmptyFieldErrorMessageValid(requiredErrorMessage), "Required");

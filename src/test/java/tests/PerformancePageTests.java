@@ -47,7 +47,6 @@ public class PerformancePageTests extends BaseTest{
     //testing if the user can add the log
     @Test
     public void addingTheLog(){
-        SoftAssert softAssert = new SoftAssert();
         performancePage.addPerformanceLog(logName, logComment);
         softAssert.assertEquals(performancePage.getMessageText(), "Success");
         softAssert.assertTrue(performancePage.isLogPresent(logName));

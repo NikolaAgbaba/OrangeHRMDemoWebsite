@@ -59,7 +59,7 @@ public class RecruitmentPage extends BasePage{
     //method for deleting the vacancy
     public void deleteTheVacancy(String vacancyName){
         navigateThroughTheRecruitmentPages("Vacancies");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-table-body")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
         for (WebElement el: vacanciesList){
             if (el.getText().contains(vacancyName)){
                 el.findElement(By.className("bi-trash")).click();
@@ -73,7 +73,7 @@ public class RecruitmentPage extends BasePage{
     //method for checking if the vacancy name is present in the vacancies list
     public boolean isVacancyPresent(String vacancyName){
         boolean isVacancyPresent = false;
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-table-card")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
         for (WebElement el: vacanciesNamesList){
             if (el.getText().equals(vacancyName)){
                 isVacancyPresent = true;
@@ -86,7 +86,7 @@ public class RecruitmentPage extends BasePage{
     //method for getting a random vacancy name
     public String getRandomVacancyName(){
         navigateThroughTheRecruitmentPages("Vacancies");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-table-card")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
         int randomVacancyNum = (int)(Math.random() * (vacanciesNamesList.size() - 2) + 1);
         String randomVacancy = "";
         for (int i = 0; i < vacanciesNamesList.size(); i++){
@@ -99,7 +99,7 @@ public class RecruitmentPage extends BasePage{
     //method for getting a random vacancy status
     public String getRandomVacancyStatus(){
         navigateThroughTheRecruitmentPages("Vacancies");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-table-card")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
         int randomVacancyNum = (int)(Math.random() * (vacanciesStatusList.size() - 2) + 1);
         String randomStatus = "";
         for (int i = 0; i < vacanciesStatusList.size(); i++) {
@@ -111,7 +111,6 @@ public class RecruitmentPage extends BasePage{
 
     //method for checking if all the vacancies have required status
     public void filterVacanciesByStatus(String vacancyStatus){
-//        boolean isVacancyPresent = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-table-card")));
         switch (vacancyStatus){
             case "Active":
@@ -134,13 +133,6 @@ public class RecruitmentPage extends BasePage{
                 vacanciesStatusDropdown.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
                 searchButton.click();
         }
-//        for (WebElement el: vacanciesStatusList){
-//            if (el.getText().equals(vacancyStatus)){
-//                isVacancyPresent = true;
-//                break;
-//            }
-//        }
-//        return isVacancyPresent;
     }
 
     //checking the vacancies status filter

@@ -30,7 +30,6 @@ public class RecruitmentPageTests extends BaseTest{
     //testing vacancy deleting
     @Test
     public void deletingTheVacancy(){
-        SoftAssert softAssert = new SoftAssert();
         String vacancyName = recruitmentPage.getRandomVacancyName();
         recruitmentPage.deleteTheVacancy(vacancyName);
         softAssert.assertEquals(recruitmentPage.getTheMessage(), expectedMessage);
@@ -48,7 +47,6 @@ public class RecruitmentPageTests extends BaseTest{
     //testing if the user can reset vacancies filter
     @Test
     public void resetVacanciesFilter(){
-        SoftAssert softAssert = new SoftAssert();
         String vacancyStatus = recruitmentPage.getRandomVacancyStatus();
         recruitmentPage.filterVacanciesByStatus(vacancyStatus);
         softAssert.assertEquals(recruitmentPage.getVacanciesStatusFilter(), recruitmentPage.getRandomVacancyStatus());

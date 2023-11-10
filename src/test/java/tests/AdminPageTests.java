@@ -41,7 +41,6 @@ public class AdminPageTests extends BaseTest{
     //testing if the newly added job is present in the jobs list
     @Test (priority = 2)
     public void addANewJobTitle(){
-        SoftAssert softAssert = new SoftAssert();
         adminPage.jobDropdownNavigation("Job", "Job Titles");
         adminPage.addAJobTitle(jobTitle);
         softAssert.assertEquals(adminPage.getMessageText(), "Success");
@@ -52,7 +51,6 @@ public class AdminPageTests extends BaseTest{
     //testing if the job can be deleted
     @Test (priority = 4)
     public void deleteTheJob(){
-        SoftAssert softAssert = new SoftAssert();
         adminPage.jobDropdownNavigation("Job", "Job Titles");
         adminPage.deleteTheJob(editedJob);
         softAssert.assertEquals(adminPage.getMessageText(), "Success");
@@ -63,7 +61,6 @@ public class AdminPageTests extends BaseTest{
     //testing if the job can be edited
     @Test (priority = 3)
     public void editTheJob(){
-        SoftAssert softAssert = new SoftAssert();
         adminPage.jobDropdownNavigation("Job", "Job Titles");
         adminPage.editTheJob(jobTitle);
         softAssert.assertEquals(adminPage.getMessageText(), "Success");

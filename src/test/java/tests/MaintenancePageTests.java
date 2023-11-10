@@ -29,6 +29,7 @@ public class MaintenancePageTests extends BaseTest{
     @Test
     public void isAdditionalAuthenticationRequired(){
         Assert.assertTrue(maintenancePage.isAdminAccessFormIsDisplayed());
+        driver.navigate().back();
     }
 
     //testing if the note is displayed on the maintenance page

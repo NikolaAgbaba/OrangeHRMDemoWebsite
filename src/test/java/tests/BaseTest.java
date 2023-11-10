@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 import pages.BasePage;
 import pages.LoginPage;
 
@@ -19,6 +20,7 @@ public abstract class BaseTest {
     protected WebDriverWait wait;
     protected Faker faker;
     protected LoginPage loginPage;
+    protected SoftAssert softAssert;
 
     @BeforeClass
     public void beforeClass(){
@@ -26,6 +28,7 @@ public abstract class BaseTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         faker = new Faker();
         loginPage = new LoginPage(driver, wait, faker);
+        softAssert = new SoftAssert();
     }
 
     @BeforeMethod

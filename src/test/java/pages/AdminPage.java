@@ -17,7 +17,7 @@ public class AdminPage extends BasePage{
     }
 
     @FindBy(className = "oxd-topbar-body-nav-tab-item")
-    List<WebElement> topNavButtonsList;
+    private List<WebElement> topNavButtonsList;
 
     @FindBy(className = "oxd-dropdown-menu")
     private WebElement dropdownMenu;
