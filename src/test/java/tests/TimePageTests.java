@@ -38,7 +38,7 @@ public class TimePageTests extends BaseTest {
 
     //checking if the timesheet is edited and the values in the timesheet are the same as in the input fields
     @Test
-    public void editTheTimesheet(){
+    public void editTheTimesheet() {
         Assert.assertTrue(timePage.verifyTimesheetValues("Edit a timesheet"));
     }
 }

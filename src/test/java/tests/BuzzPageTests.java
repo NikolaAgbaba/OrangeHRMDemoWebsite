@@ -10,14 +10,14 @@ import pages.HomePage;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class BuzzPageTests extends BaseTest{
+public class BuzzPageTests extends BaseTest {
     private BuzzPage buzzPage;
     private HomePage homePage;
     private String inputData;
     private SimpleDateFormat dateFormat;
 
     @BeforeClass
-    public void beforeClass(){
+    public void beforeClass() {
         super.beforeClass();
         buzzPage = new BuzzPage(driver, wait, faker, dateFormat);
         homePage = new HomePage(driver, wait, faker);
@@ -25,15 +25,15 @@ public class BuzzPageTests extends BaseTest{
     }
 
     @BeforeMethod
-    public void beforeMethod(){
+    public void beforeMethod() {
         super.beforeMethod();
         loginPage.login(loginPage.getValidUsername(), loginPage.getValidPassword());
         homePage.goToThePage("Buzz");
     }
 
     //checking if the user can publish a post
-    @Test (priority = 1)
-    public void publishAPost(){
+    @Test(priority = 1)
+    public void publishAPost() {
         inputData = faker.lordOfTheRings().character();
         buzzPage.publishAPost(inputData);
         softAssert.assertEquals(buzzPage.getMessageText(), "Success");
@@ -42,8 +42,8 @@ public class BuzzPageTests extends BaseTest{
     }
 
     //checking if the user can delete a post
-    @Test (priority = 3)
-    public void deleteAPost(){
+    @Test(priority = 3)
+    public void deleteAPost() {
         String firstPost = buzzPage.getNewestPostText();
         inputData = faker.lordOfTheRings().character();
         buzzPage.deleteOrEditAPost("delete", inputData);
@@ -53,8 +53,8 @@ public class BuzzPageTests extends BaseTest{
     }
 
     //checking if the user can edit a post
-    @Test (priority = 2)
-    public void editAPost(){
+    @Test(priority = 2)
+    public void editAPost() {
         String firstPost = buzzPage.getNewestPostText();
         System.out.println(firstPost);
         String editingPart = "edited";
@@ -67,14 +67,14 @@ public class BuzzPageTests extends BaseTest{
 
     //checking if the user can sort posts by the number of likes
     @Test
-    public void sortPostsByNumberOfLikes(){
+    public void sortPostsByNumberOfLikes() {
         buzzPage.sortPosts("Most Liked Posts");
         Assert.assertTrue(buzzPage.arePostsSortedByNumberOfLikes());
     }
 
     //checking if the user can sort posts by the number of comments
     @Test
-    public void sortPostsByNumberOfComments(){
+    public void sortPostsByNumberOfComments() {
         driver.navigate().refresh();
         try {
             Thread.sleep(3000);
@@ -87,7 +87,7 @@ public class BuzzPageTests extends BaseTest{
 
     //checking if the user can sort posts by the date
     @Test
-    public void sortPostsByDate(){
+    public void sortPostsByDate() {
         buzzPage.sortPosts("Most Recent Posts");
         try {
             Assert.assertTrue(buzzPage.arePostsSortedByTheDate());

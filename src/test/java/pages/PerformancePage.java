@@ -91,44 +91,44 @@ public class PerformancePage extends BasePage {
     }
 
     //method for showing the employee tracker filters
-    public void showFilters(){
+    public void showFilters() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("bi-caret-down-fill")));
         expandButton.click();
     }
 
     //getting the form
-    public WebElement getForm(){
+    public WebElement getForm() {
         return form;
     }
 
     //method for viewing the employees performance
-    public void viewRandomEmployeePerformance(){
+    public void viewRandomEmployeePerformance() {
         navigateThroughThePerformancePage("Employee Trackers");
-        int employeeNumber = (int)(Math.random() * (employeeTrackersList.size() - 2) + 1);
-        for(int i = 0; i < employeeTrackersList.size(); i++) {
+        int employeeNumber = (int) (Math.random() * (employeeTrackersList.size() - 2) + 1);
+        for (int i = 0; i < employeeTrackersList.size(); i++) {
             employeeTrackersList.get(employeeNumber).findElement(By.name("view")).click();
             break;
         }
     }
 
     //method for checking if the tracker log page is displayed
-    public boolean isPerformanceTrackerPageDisplayed(){
+    public boolean isPerformanceTrackerPageDisplayed() {
         navigateThroughThePerformancePage("Employee Trackers");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
         return trackerLogContainer.isDisplayed();
     }
 
     //method for adding the performance log
-    public void addPerformanceLog(String logName, String comment){
-        int randomNumber = (int)(Math.random() * 2) + 1;
+    public void addPerformanceLog(String logName, String comment) {
+        int randomNumber = (int) (Math.random() * 2) + 1;
         navigateThroughThePerformancePage("Employee Trackers");
         viewRandomEmployeePerformance();
         addLogButton.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-sheet")));
         logNameInputField.sendKeys(logName);
-        if (randomNumber == 1){
+        if (randomNumber == 1) {
             positiveLogButton.click();
-        }else if (randomNumber == 2){
+        } else if (randomNumber == 2) {
             negativeLogButton.click();
         }
         commentInputField.sendKeys(comment);
@@ -136,16 +136,16 @@ public class PerformancePage extends BasePage {
     }
 
     //method for getting the message text
-    public String getMessageText(){
+    public String getMessageText() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"oxd-toaster_1\"]/div/div[1]/div[2]/p[1]")));
         return savedMessage.getText();
     }
 
     //method for checking if the tracker log is present in the tracker logs list
-    public boolean isLogPresent(String logName){
+    public boolean isLogPresent(String logName) {
         boolean logIsPresent = false;
-        for (WebElement el: trackerLogsHeadings){
-            if (el.getText().equals(logName)){
+        for (WebElement el : trackerLogsHeadings) {
+            if (el.getText().equals(logName)) {
                 logIsPresent = true;
                 break;
             }

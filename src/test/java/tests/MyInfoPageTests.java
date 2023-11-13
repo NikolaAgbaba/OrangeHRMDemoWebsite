@@ -52,7 +52,7 @@ public class MyInfoPageTests extends BaseTest {
 
     //checking if the user can go to the help page for creating an emergency contact
     @Test
-    public void goingToTheHelpPage(){
+    public void goingToTheHelpPage() {
         myInfoPage.navigateThroughMyInfoPages("Emergency Contacts");
         myInfoPage.goToTheHelpPage();
         Assert.assertEquals(driver.getCurrentUrl(), "https://starterhelp.orangehrm.com/hc/en-us/articles/360018590940-How-to-Add-Emergency-Contacts");
@@ -61,7 +61,7 @@ public class MyInfoPageTests extends BaseTest {
 
     //checking if the emergency contact creation can be cancelled
     @Test
-    public void cancelEmergencyContactCreation(){
+    public void cancelEmergencyContactCreation() {
         myInfoPage.navigateThroughMyInfoPages("Emergency Contacts");
         myInfoPage.fillEmergencyContactInfo(name, relationship, mobile);
         myInfoPage.cancelEmergencyContactCreation();

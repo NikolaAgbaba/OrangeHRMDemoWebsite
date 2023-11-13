@@ -10,13 +10,13 @@ import pages.HomePage;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DashboardPageTests extends BaseTest{
+public class DashboardPageTests extends BaseTest {
     private DashboardPage dashboardPage;
     private HomePage homePage;
     private List<String> widgetTitlesList = new ArrayList<>();
 
     @BeforeClass
-    public void beforeClass(){
+    public void beforeClass() {
         super.beforeClass();
         dashboardPage = new DashboardPage(driver, wait, faker);
         homePage = new HomePage(driver, wait, faker);
@@ -30,7 +30,7 @@ public class DashboardPageTests extends BaseTest{
     }
 
     @BeforeMethod
-    public void beforeMethod(){
+    public void beforeMethod() {
         super.beforeMethod();
         loginPage.login(loginPage.getValidUsername(), loginPage.getValidPassword());
         homePage.goToThePage("Dashboard");
@@ -38,7 +38,7 @@ public class DashboardPageTests extends BaseTest{
 
     //checking if all the widgets are displayed on dashboard page
     @Test
-    public void areDashboardWidgetsDisplayed(){
+    public void areDashboardWidgetsDisplayed() {
         Assert.assertTrue(dashboardPage.areDashboardElementsDisplayed(widgetTitlesList));
     }
 }

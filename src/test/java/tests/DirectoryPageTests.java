@@ -7,19 +7,19 @@ import org.testng.annotations.Test;
 import pages.DirectoryPage;
 import pages.HomePage;
 
-public class DirectoryPageTests extends BaseTest{
+public class DirectoryPageTests extends BaseTest {
     private DirectoryPage directoryPage;
     private HomePage homePage;
 
     @BeforeClass
-    public void beforeClass(){
+    public void beforeClass() {
         super.beforeClass();
         directoryPage = new DirectoryPage(driver, wait, faker);
         homePage = new HomePage(driver, wait, faker);
     }
 
     @BeforeMethod
-    public void beforeMethod(){
+    public void beforeMethod() {
         super.beforeMethod();
         loginPage.login(loginPage.getValidUsername(), loginPage.getValidPassword());
         homePage.goToThePage("Directory");
@@ -27,7 +27,7 @@ public class DirectoryPageTests extends BaseTest{
 
     //testing if the expanded profile information for employee are displayed when clicking on the profile card
     @Test
-    public void isExpandedCardDisplayed(){
+    public void isExpandedCardDisplayed() {
         Assert.assertTrue(directoryPage.isProfileDisplayed());
     }
 }

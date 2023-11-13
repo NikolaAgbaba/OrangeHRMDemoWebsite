@@ -8,9 +8,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class DashboardPage extends BasePage{
+public class DashboardPage extends BasePage {
 
-    public DashboardPage(WebDriver driver, WebDriverWait wait, Faker faker){
+    public DashboardPage(WebDriver driver, WebDriverWait wait, Faker faker) {
         super(driver, wait, faker);
     }
 
@@ -42,12 +42,11 @@ public class DashboardPage extends BasePage{
     private List<WebElement> headersList;
 
 
-
     //method for checking if the dashboard widgets are displayed
-    public boolean areDashboardElementsDisplayed(List<String> widgetsTitlesList){
+    public boolean areDashboardElementsDisplayed(List<String> widgetsTitlesList) {
         boolean areDisplayed = true;
-        for (int i = 0; i < dashboardWidgets.size(); i++){
-            if (!dashboardWidgets.get(i).getText().contains(headersList.get(i).getText())){
+        for (int i = 0; i < dashboardWidgets.size(); i++) {
+            if (!dashboardWidgets.get(i).getText().contains(headersList.get(i).getText())) {
                 areDisplayed = false;
                 break;
             }

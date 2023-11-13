@@ -27,17 +27,17 @@ public class ClaimPageTests extends BaseTest {
     }
 
     //testing if the user can delete multiple expense types
-    @Test (priority = 2)
+    @Test(priority = 2)
     public void deletingMultipleExpenseTypes() {
         claimPage.configurationDropdownNavigation("Configuration", "Expense Types");
         Assert.assertFalse(claimPage.areExpenseTypesDeleted((int) (Math.random() * 3) + 1));
     }
 
     //test for changing the activity status
-    @Test (priority = 1)
-    public void changeTheActivityStatus(){
+    @Test(priority = 1)
+    public void changeTheActivityStatus() {
         claimPage.configurationDropdownNavigation("Configuration", "Expense Types");
-        expenseTypeNumber = (int)(Math.random() * (claimPage.getExpenseTypesList().size()));
+        expenseTypeNumber = (int) (Math.random() * (claimPage.getExpenseTypesList().size()));
         Assert.assertTrue(claimPage.hasStatusChanged(expenseTypeNumber));
     }
 }

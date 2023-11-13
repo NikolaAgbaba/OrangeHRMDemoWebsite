@@ -94,7 +94,7 @@ public class ClaimPage extends BasePage {
     public void deleteMultipleExpenseTypes(int numberOfExpenseTypes) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
         for (int i = 0; i < numberOfExpenseTypes; i++) {
-            expenseTypesList.get(i).findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div[2]/div[3]/div/div[2]/div[" + (int)(i + 1) + "]/div/div[1]/div/div/label/span/i")).click();
+            expenseTypesList.get(i).findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div[2]/div[3]/div/div[2]/div[" + (int) (i + 1) + "]/div/div[1]/div/div/label/span/i")).click();
         }
         deleteSelectedButton.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div[3]/div/div/div/div[3]/button[2]")));
@@ -174,7 +174,7 @@ public class ClaimPage extends BasePage {
     public boolean hasStatusChanged(int expenseTypeNumber) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
         if (expenseTypeNumber >= expenseTypesList.size()) {
-                addExpenseType("Random expense type " + faker.name().fullName());
+            addExpenseType("Random expense type " + faker.name().fullName());
         }
         try {
             Thread.sleep(3000);

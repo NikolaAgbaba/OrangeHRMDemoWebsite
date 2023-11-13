@@ -10,11 +10,11 @@ public abstract class BasePage {
     protected WebDriverWait wait;
     protected Faker faker;
 
-    public BasePage(){
+    public BasePage() {
 
     }
 
-    public BasePage(WebDriver driver, WebDriverWait wait, Faker faker){
+    public BasePage(WebDriver driver, WebDriverWait wait, Faker faker) {
         this.driver = driver;
         this.wait = wait;
         this.faker = faker;

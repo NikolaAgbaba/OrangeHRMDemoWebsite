@@ -158,7 +158,7 @@ public class PIMPage extends BasePage {
     }
 
     //method for getting the message for created or deleted employee
-    public String getMessageText(){
+    public String getMessageText() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"oxd-toaster_1\"]/div/div[1]/div[2]/p[1]")));
         return savedMessage.getText();
     }

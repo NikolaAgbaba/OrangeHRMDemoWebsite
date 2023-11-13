@@ -27,20 +27,20 @@ public class MaintenancePage extends BasePage {
     private WebElement note;
 
     //method for checking if the admin access form is displayed
-    public boolean isAdminAccessFormIsDisplayed(){
+    public boolean isAdminAccessFormIsDisplayed() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-admin-access-container")));
         return adminAccessContainer.isDisplayed();
     }
 
     //method for completing the additional authentication
-    public void completeAuthenticationStep(String password){
+    public void completeAuthenticationStep(String password) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-admin-access-container")));
         passwordInputField.sendKeys(password);
         confirmButton.click();
     }
 
     //method for checking if the note is displayed on the maintenance page
-    public boolean isTheNoteDisplayed(){
+    public boolean isTheNoteDisplayed() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]")));
         return note.isDisplayed();
     }

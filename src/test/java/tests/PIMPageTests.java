@@ -9,7 +9,7 @@ import pages.HomePage;
 import pages.LoginPage;
 import pages.PIMPage;
 
-public class PIMPageTests extends BaseTest{
+public class PIMPageTests extends BaseTest {
     private PIMPage pimPage;
     private HomePage homePage;
     private String expectedMessage;
@@ -21,14 +21,14 @@ public class PIMPageTests extends BaseTest{
     private String password;
 
     @BeforeClass
-    public void beforeClass(){
+    public void beforeClass() {
         super.beforeClass();
         pimPage = new PIMPage(driver, wait, faker);
         homePage = new HomePage(driver, wait, faker);
     }
 
     @BeforeMethod
-    public void beforeMethod(){
+    public void beforeMethod() {
         super.beforeMethod();
         loginPage.login(loginPage.getValidUsername(), loginPage.getValidPassword());
         homePage.goToThePage("PIM");
@@ -43,19 +43,19 @@ public class PIMPageTests extends BaseTest{
 
     //checking if the employee searched by name is present in the filtered list
     @Test
-    public void searchEmployeeByName(){
+    public void searchEmployeeByName() {
         Assert.assertTrue(pimPage.searchRandomEmployeeByName());
     }
 
     //checking if the employee searched by id is present in the filtered list
     @Test
-    public void searchEmployeeById(){
+    public void searchEmployeeById() {
         Assert.assertTrue(pimPage.searchRandomEmployeeById());
     }
 
     //checking if the new employee can be added without creating login credentials
     @Test
-    public void addTheEmployee(){
+    public void addTheEmployee() {
         pimPage.addEmployee(firstName, lastName, id);
         softAssert.assertEquals(pimPage.getMessageText(), expectedMessage);
         softAssert.assertTrue(pimPage.searchSpecificEmployeeByName(fullName));
@@ -64,7 +64,7 @@ public class PIMPageTests extends BaseTest{
 
     //checking if the employee can be added with creating login credentials
     @Test
-    public void addTheEmployeeAndCreateCredentials(){
+    public void addTheEmployeeAndCreateCredentials() {
         pimPage.addEmployeeAndCreateLoginCredentials(firstName, lastName, id, username, password, password);
         softAssert.assertEquals(pimPage.getMessageText(), expectedMessage);
         softAssert.assertTrue(pimPage.searchSpecificEmployeeByName(fullName));
@@ -76,7 +76,7 @@ public class PIMPageTests extends BaseTest{
 
     //checking if the admin can delete the employee
     @Test
-    public void deleteTheEmployee(){
+    public void deleteTheEmployee() {
         pimPage.deleteTheEmployee();
         softAssert.assertEquals(pimPage.getMessageText(), "Success");
         softAssert.assertTrue(pimPage.getEmployeesList().isEmpty());

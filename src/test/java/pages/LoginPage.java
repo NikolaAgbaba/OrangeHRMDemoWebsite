@@ -14,9 +14,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
-    public LoginPage(WebDriver driver, WebDriverWait wait, Faker faker){
+    public LoginPage(WebDriver driver, WebDriverWait wait, Faker faker) {
         super(driver, wait, faker);
     }
 
@@ -36,7 +36,7 @@ public class LoginPage extends BasePage{
     private WebElement emptyFieldErrorMessage;
 
     //setting a valid email
-    public String getValidUsername(){
+    public String getValidUsername() {
         try {
             Configuration.init();
             return Configuration.validUsername;
@@ -46,7 +46,7 @@ public class LoginPage extends BasePage{
     }
 
     //getting a valid password
-    public String getValidPassword(){
+    public String getValidPassword() {
         try {
             Configuration.init();
         } catch (IOException e) {
@@ -56,7 +56,7 @@ public class LoginPage extends BasePage{
     }
 
     //getting the url
-    public String getUrl(){
+    public String getUrl() {
         try {
             Configuration.init();
         } catch (IOException e) {
@@ -66,20 +66,20 @@ public class LoginPage extends BasePage{
     }
 
     //method for login
-    public void login(String username, String password){
+    public void login(String username, String password) {
         usernameField.sendKeys(username);
         passwordField.sendKeys(password);
         loginButton.click();
     }
 
     //method for checking if the message for invalid credentials is valid
-    public boolean isInvalidCredentialsMessageValid(String invalidCredentialsMessage){
+    public boolean isInvalidCredentialsMessageValid(String invalidCredentialsMessage) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-alert--error")));
         return this.invalidCredentialsMessage.getText().equals(invalidCredentialsMessage);
     }
 
     //method for checking if the message for empty fields is valid
-    public boolean isEmptyFieldErrorMessageValid(String requiredFieldMessage){
+    public boolean isEmptyFieldErrorMessageValid(String requiredFieldMessage) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-input-field-error-message")));
         return emptyFieldErrorMessage.getText().equals(requiredFieldMessage);
     }

@@ -11,9 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class RecruitmentPage extends BasePage{
+public class RecruitmentPage extends BasePage {
 
-    public RecruitmentPage(WebDriver driver, WebDriverWait wait, Faker faker){
+    public RecruitmentPage(WebDriver driver, WebDriverWait wait, Faker faker) {
         super(driver, wait, faker);
     }
 
@@ -48,20 +48,20 @@ public class RecruitmentPage extends BasePage{
     private WebElement message;
 
     //method for navigating through the recruitment pages
-    public void navigateThroughTheRecruitmentPages(String desiredPage){
-        if (desiredPage.equals("Candidates")){
+    public void navigateThroughTheRecruitmentPages(String desiredPage) {
+        if (desiredPage.equals("Candidates")) {
             candidatesNavigationButton.click();
-        }else if (desiredPage.equals("Vacancies")){
+        } else if (desiredPage.equals("Vacancies")) {
             vacanciesNavigationButton.click();
         }
     }
 
     //method for deleting the vacancy
-    public void deleteTheVacancy(String vacancyName){
+    public void deleteTheVacancy(String vacancyName) {
         navigateThroughTheRecruitmentPages("Vacancies");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
-        for (WebElement el: vacanciesList){
-            if (el.getText().contains(vacancyName)){
+        for (WebElement el : vacanciesList) {
+            if (el.getText().contains(vacancyName)) {
                 el.findElement(By.className("bi-trash")).click();
                 break;
             }
@@ -71,11 +71,11 @@ public class RecruitmentPage extends BasePage{
     }
 
     //method for checking if the vacancy name is present in the vacancies list
-    public boolean isVacancyPresent(String vacancyName){
+    public boolean isVacancyPresent(String vacancyName) {
         boolean isVacancyPresent = false;
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
-        for (WebElement el: vacanciesNamesList){
-            if (el.getText().equals(vacancyName)){
+        for (WebElement el : vacanciesNamesList) {
+            if (el.getText().equals(vacancyName)) {
                 isVacancyPresent = true;
                 break;
             }
@@ -84,12 +84,12 @@ public class RecruitmentPage extends BasePage{
     }
 
     //method for getting a random vacancy name
-    public String getRandomVacancyName(){
+    public String getRandomVacancyName() {
         navigateThroughTheRecruitmentPages("Vacancies");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
-        int randomVacancyNum = (int)(Math.random() * (vacanciesNamesList.size() - 2) + 1);
+        int randomVacancyNum = (int) (Math.random() * (vacanciesNamesList.size() - 2) + 1);
         String randomVacancy = "";
-        for (int i = 0; i < vacanciesNamesList.size(); i++){
+        for (int i = 0; i < vacanciesNamesList.size(); i++) {
             randomVacancy = vacanciesNamesList.get(randomVacancyNum).getText();
             break;
         }
@@ -97,10 +97,10 @@ public class RecruitmentPage extends BasePage{
     }
 
     //method for getting a random vacancy status
-    public String getRandomVacancyStatus(){
+    public String getRandomVacancyStatus() {
         navigateThroughTheRecruitmentPages("Vacancies");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-container")));
-        int randomVacancyNum = (int)(Math.random() * (vacanciesStatusList.size() - 2) + 1);
+        int randomVacancyNum = (int) (Math.random() * (vacanciesStatusList.size() - 2) + 1);
         String randomStatus = "";
         for (int i = 0; i < vacanciesStatusList.size(); i++) {
             randomStatus = vacanciesStatusList.get(randomVacancyNum).getText();
@@ -110,9 +110,9 @@ public class RecruitmentPage extends BasePage{
     }
 
     //method for checking if all the vacancies have required status
-    public void filterVacanciesByStatus(String vacancyStatus){
+    public void filterVacanciesByStatus(String vacancyStatus) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-table-card")));
-        switch (vacancyStatus){
+        switch (vacancyStatus) {
             case "Active":
                 vacanciesStatusDropdown.click();
                 try {
@@ -136,21 +136,21 @@ public class RecruitmentPage extends BasePage{
     }
 
     //checking the vacancies status filter
-    public String getVacanciesStatusFilter(){
+    public String getVacanciesStatusFilter() {
         return vacanciesStatusDropdown.getText();
     }
 
     //resetting the vacancies status filter
-    public void resetFilters(){
+    public void resetFilters() {
         resetFilters.click();
     }
 
     //method for checking if all the vacancies have required status
-    public boolean areVacanciesFilteredByStatus(String vacancyStatus){
+    public boolean areVacanciesFilteredByStatus(String vacancyStatus) {
         boolean isVacancyPresent = false;
         filterVacanciesByStatus(vacancyStatus);
-        for (WebElement el: vacanciesStatusList){
-            if (el.getText().equals(vacancyStatus)){
+        for (WebElement el : vacanciesStatusList) {
+            if (el.getText().equals(vacancyStatus)) {
                 isVacancyPresent = true;
                 break;
             }
@@ -159,7 +159,7 @@ public class RecruitmentPage extends BasePage{
     }
 
     //method for getting the message
-    public String getTheMessage(){
+    public String getTheMessage() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"oxd-toaster_1\"]/div/div[1]/div[2]/p[1]")));
         return message.getText();
     }

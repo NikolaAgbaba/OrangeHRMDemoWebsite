@@ -23,7 +23,7 @@ public abstract class BaseTest {
     protected SoftAssert softAssert;
 
     @BeforeClass
-    public void beforeClass(){
+    public void beforeClass() {
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         faker = new Faker();
@@ -32,16 +32,16 @@ public abstract class BaseTest {
     }
 
     @BeforeMethod
-    public void beforeMethod(){
+    public void beforeMethod() {
         driver.navigate().to(loginPage.getUrl());
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
     }
 
     @AfterMethod
-    public void afterMethod(){
+    public void afterMethod() {
         List<WebElement> logoutNavigation = driver.findElements(By.className("oxd-topbar-header"));
-        if (!logoutNavigation.isEmpty()){
+        if (!logoutNavigation.isEmpty()) {
             WebElement nameDropdown = driver.findElement(By.className("oxd-userdropdown-name"));
             nameDropdown.click();
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/web/index.php/auth/logout']")));
@@ -51,7 +51,7 @@ public abstract class BaseTest {
     }
 
     @AfterClass
-    public void afterClass(){
+    public void afterClass() {
         driver.quit();
     }
 }

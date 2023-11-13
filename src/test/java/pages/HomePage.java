@@ -10,9 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
-    public HomePage(WebDriver driver, WebDriverWait wait, Faker faker){
+    public HomePage(WebDriver driver, WebDriverWait wait, Faker faker) {
         super(driver, wait, faker);
     }
 
@@ -26,9 +26,9 @@ public class HomePage extends BasePage{
     private WebElement logoutButton;
 
     //method for navigating through the pages
-    public void goToThePage(String elementName){
+    public void goToThePage(String elementName) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("oxd-main-menu")));
-        for (WebElement el: navigationItems) {
+        for (WebElement el : navigationItems) {
             if (el.getText().equals(elementName)) {
                 el.click();
                 break;
@@ -37,7 +37,7 @@ public class HomePage extends BasePage{
     }
 
     //method for logging out
-    public void logout(){
+    public void logout() {
         nameDropdown.click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/web/index.php/auth/logout']")));
         logoutButton.click();

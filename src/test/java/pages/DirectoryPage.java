@@ -10,8 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class DirectoryPage extends BasePage{
-    public DirectoryPage(WebDriver driver, WebDriverWait wait, Faker faker){
+public class DirectoryPage extends BasePage {
+    public DirectoryPage(WebDriver driver, WebDriverWait wait, Faker faker) {
         super(driver, wait, faker);
     }
 
@@ -22,16 +22,16 @@ public class DirectoryPage extends BasePage{
     private WebElement expandedEmployeeCard;
 
     //method for clicking on a random employee
-    public void clickingOnARandomEmployee(){
-        int employeeNumber = (int)(Math.random() * profilesList.size());
-        for (int i = 0 ; i<profilesList.size(); i++){
+    public void clickingOnARandomEmployee() {
+        int employeeNumber = (int) (Math.random() * profilesList.size());
+        for (int i = 0; i < profilesList.size(); i++) {
             profilesList.get(employeeNumber).click();
             break;
         }
     }
 
     //method for checking if the expanded profile info is displayed
-    public boolean isProfileDisplayed(){
+    public boolean isProfileDisplayed() {
         clickingOnARandomEmployee();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-corporate-directory-sidebar")));
         return expandedEmployeeCard.isDisplayed();
