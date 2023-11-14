@@ -31,7 +31,6 @@ public class BuzzPageTests extends BaseTest {
         homePage.goToThePage("Buzz");
     }
 
-    //checking if the user can publish a post
     @Test(priority = 1)
     public void publishAPost() {
         inputData = faker.lordOfTheRings().character();
@@ -41,7 +40,6 @@ public class BuzzPageTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //checking if the user can delete a post
     @Test(priority = 3)
     public void deleteAPost() {
         String firstPost = buzzPage.getNewestPostText();
@@ -52,7 +50,6 @@ public class BuzzPageTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //checking if the user can edit a post
     @Test(priority = 2)
     public void editAPost() {
         String firstPost = buzzPage.getNewestPostText();
@@ -63,14 +60,12 @@ public class BuzzPageTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //checking if the user can sort posts by the number of likes
     @Test
     public void sortPostsByNumberOfLikes() {
         buzzPage.sortPosts("Most Liked Posts");
         Assert.assertTrue(buzzPage.arePostsSortedByNumberOfLikes());
     }
 
-    //checking if the user can sort posts by the number of comments
     @Test
     public void sortPostsByNumberOfComments() {
         driver.navigate().refresh();
@@ -83,7 +78,6 @@ public class BuzzPageTests extends BaseTest {
         Assert.assertTrue(buzzPage.arePostsSortedByNumberOfComments());
     }
 
-    //checking if the user can sort posts by the date
     @Test
     public void sortPostsByDate() {
         buzzPage.sortPosts("Most Recent Posts");

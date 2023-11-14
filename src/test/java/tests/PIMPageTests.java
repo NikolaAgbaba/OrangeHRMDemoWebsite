@@ -41,19 +41,16 @@ public class PIMPageTests extends BaseTest {
         password = faker.internet().password() + 1;
     }
 
-    //checking if the employee searched by name is present in the filtered list
     @Test
     public void searchEmployeeByName() {
         Assert.assertTrue(pimPage.searchRandomEmployeeByName());
     }
 
-    //checking if the employee searched by id is present in the filtered list
     @Test
     public void searchEmployeeById() {
         Assert.assertTrue(pimPage.searchRandomEmployeeById());
     }
 
-    //checking if the new employee can be added without creating login credentials
     @Test
     public void addTheEmployee() {
         pimPage.addEmployee(firstName, lastName, id);
@@ -62,7 +59,6 @@ public class PIMPageTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //checking if the employee can be added with creating login credentials
     @Test
     public void addTheEmployeeAndCreateCredentials() {
         pimPage.addEmployeeAndCreateLoginCredentials(firstName, lastName, id, username, password, password);
@@ -74,7 +70,6 @@ public class PIMPageTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //checking if the admin can delete the employee
     @Test
     public void deleteTheEmployee() {
         pimPage.deleteTheEmployee();

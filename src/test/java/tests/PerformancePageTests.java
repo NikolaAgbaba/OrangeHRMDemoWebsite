@@ -30,21 +30,18 @@ public class PerformancePageTests extends BaseTest {
         logComment = faker.lordOfTheRings().character();
     }
 
-    //testing if the user can hide the performance tracker filters
     @Test
     public void hideFiltersTest() {
         performancePage.hideFilters();
         Assert.assertFalse(performancePage.getForm().isDisplayed());
     }
 
-    //testing if the user can see the performance tracker log for the employee
     @Test
     public void viewEmployeePerformance() {
         performancePage.viewRandomEmployeePerformance();
         Assert.assertTrue(performancePage.isPerformanceTrackerPageDisplayed());
     }
 
-    //testing if the user can add the log
     @Test
     public void addingTheLog() {
         performancePage.addPerformanceLog(logName, logComment);

@@ -22,14 +22,12 @@ public class LoginTests extends BaseTest {
         validAdminPassword = loginPage.getValidPassword();
     }
 
-    //login with valid credentials
     @Test
     public void loginWithValidCredentials() {
         loginPage.login(validAdminUsername, validAdminPassword);
         Assert.assertEquals(driver.getCurrentUrl(), "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
     }
 
-    //login with invalid username and a valid password
     @Test
     public void invalidUsernameAndValidPasswordLogin() {
         loginPage.login(faker.name().username(), validAdminPassword);
@@ -38,7 +36,6 @@ public class LoginTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //login with a valid username and invalid password
     @Test
     public void validUsernameAndInvalidPasswordLogin() {
         loginPage.login(validAdminUsername, faker.internet().password());
@@ -47,7 +44,6 @@ public class LoginTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //login while leaving the username field empty
     @Test
     public void emptyUsernameFieldLogin() {
         loginPage.login("", validAdminPassword);
@@ -56,7 +52,6 @@ public class LoginTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //login while leaving the password field empty
     @Test
     public void emptyPasswordFieldLogin() {
         loginPage.login(validAdminUsername, "");

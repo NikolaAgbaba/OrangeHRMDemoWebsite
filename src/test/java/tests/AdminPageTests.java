@@ -31,14 +31,12 @@ public class AdminPageTests extends BaseTest {
         homePage.goToThePage("Admin");
     }
 
-    //testing if the jobs container is displayed
     @Test(priority = 1)
     public void areJobTitlesDisplayed() {
         adminPage.jobDropdownNavigation("Job", "Job Titles");
         Assert.assertTrue(adminPage.getJobsContainer().isDisplayed());
     }
 
-    //testing if the newly added job is present in the jobs list
     @Test(priority = 2)
     public void addANewJobTitle() {
         adminPage.jobDropdownNavigation("Job", "Job Titles");
@@ -48,7 +46,6 @@ public class AdminPageTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //testing if the job can be deleted
     @Test(priority = 4)
     public void deleteTheJob() {
         adminPage.jobDropdownNavigation("Job", "Job Titles");
@@ -58,7 +55,6 @@ public class AdminPageTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //testing if the job can be edited
     @Test(priority = 3)
     public void editTheJob() {
         adminPage.jobDropdownNavigation("Job", "Job Titles");

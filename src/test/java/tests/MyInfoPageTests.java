@@ -50,7 +50,6 @@ public class MyInfoPageTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //checking if the user can go to the help page for creating an emergency contact
     @Test
     public void goingToTheHelpPage() {
         myInfoPage.navigateThroughMyInfoPages("Emergency Contacts");
@@ -59,7 +58,6 @@ public class MyInfoPageTests extends BaseTest {
         myInfoPage.exitFromTheHelpPage();
     }
 
-    //checking if the emergency contact creation can be cancelled
     @Test
     public void cancelEmergencyContactCreation() {
         myInfoPage.navigateThroughMyInfoPages("Emergency Contacts");

@@ -32,7 +32,6 @@ public class LeavePageTests extends BaseTest{
         homePage.goToThePage("Leave");
     }
 
-    //checking if after filtering the list only dates after the from date are displayed
     @Test
     public void checkLeavesFilteringByDate(){
         try {
@@ -42,13 +41,11 @@ public class LeavePageTests extends BaseTest{
         }
     }
 
-    //checking if leaves can be filtered by the leave status
     @Test
     public void filterByTheLeaveStatus(){
         Assert.assertTrue(leavePage.checkLeavesBySelectedStatus("Pending Approval"));
     }
 
-    //checking if leaves can be filtered by the employee name
     @Test
     public void filterByTheEmployeeName(){
         Assert.assertTrue(leavePage.searchByEmployeeName());

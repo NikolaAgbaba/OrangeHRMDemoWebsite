@@ -94,6 +94,7 @@ public class BuzzPage extends BasePage {
     //method for getting a text from the newest post
     public String getNewestPostText() {
         String postText = "";
+        driver.navigate().refresh();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-buzz-newsfeed-posts")));
         for (int i = 0; i < postsTextList.size(); i++) {
             postText = postsTextList.get(0).getText();

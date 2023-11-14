@@ -25,14 +25,12 @@ public class MaintenancePageTests extends BaseTest {
         homePage.goToThePage("Maintenance");
     }
 
-    //testing if additional authentication is required in order to access the maintenance page
     @Test
     public void isAdditionalAuthenticationRequired() {
         Assert.assertTrue(maintenancePage.isAdminAccessFormIsDisplayed());
         driver.navigate().back();
     }
 
-    //testing if the note is displayed on the maintenance page
     @Test
     public void isNoteDisplayed() {
         maintenancePage.completeAuthenticationStep(loginPage.getValidPassword());

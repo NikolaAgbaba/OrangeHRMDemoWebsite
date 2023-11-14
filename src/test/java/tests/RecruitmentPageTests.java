@@ -27,7 +27,6 @@ public class RecruitmentPageTests extends BaseTest {
         homePage.goToThePage("Recruitment");
     }
 
-    //testing vacancy deleting
     @Test
     public void deletingTheVacancy() {
         String vacancyName = recruitmentPage.getRandomVacancyName();
@@ -37,14 +36,12 @@ public class RecruitmentPageTests extends BaseTest {
         softAssert.assertAll();
     }
 
-    //testing if vacancies can be filtered by status
     @Test
     public void filterTheVacancyByStatus() {
         String vacancyStatus = recruitmentPage.getRandomVacancyStatus();
         Assert.assertTrue(recruitmentPage.areVacanciesFilteredByStatus(vacancyStatus));
     }
 
-    //testing if the user can reset vacancies filter
     @Test
     public void resetVacanciesFilter() {
         String vacancyStatus = recruitmentPage.getRandomVacancyStatus();

@@ -25,7 +25,6 @@ public class DirectoryPageTests extends BaseTest {
         homePage.goToThePage("Directory");
     }
 
-    //testing if the expanded profile information for employee are displayed when clicking on the profile card
     @Test
     public void isExpandedCardDisplayed() {
         Assert.assertTrue(directoryPage.isProfileDisplayed());

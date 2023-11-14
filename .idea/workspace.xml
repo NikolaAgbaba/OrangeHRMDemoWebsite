@@ -5,10 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="Renamed the helper class so that it makes more sense, deleted commented code">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/BuzzPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BuzzPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/PerformancePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/PerformancePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AdminPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AdminPageTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/BuzzPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BuzzPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/ClaimPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/ClaimPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DashboardPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DashboardPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DirectoryPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DirectoryPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LeavePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LeavePageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MaintenancePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MaintenancePageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/MyInfoPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/MyInfoPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PIMPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PIMPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PerformancePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PerformancePageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RecruitmentPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RecruitmentPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/RedirectionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RedirectionTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TimePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TimePageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,30 +80,14 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/nikola.agbaba/IdeaProjects/VegaITProject/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager" selected="TestNG.tests">
-    <configuration name="AdminPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="VegaITProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AdminPageTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BuzzPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
@@ -108,7 +105,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PIMPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ClaimPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -117,8 +114,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.PIMPageTests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ClaimPageTests" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DashboardPageTests.areDashboardWidgetsDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="VegaITProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DashboardPageTests" />
+      <option name="METHOD_NAME" value="areDashboardWidgetsDisplayed" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -161,10 +176,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.tests" />
-        <item itemvalue="TestNG.PerformancePageTests" />
+        <item itemvalue="TestNG.ClaimPageTests" />
         <item itemvalue="TestNG.BuzzPageTests" />
-        <item itemvalue="TestNG.PIMPageTests" />
-        <item itemvalue="TestNG.AdminPageTests" />
+        <item itemvalue="TestNG.DashboardPageTests.areDashboardWidgetsDisplayed" />
+        <item itemvalue="TestNG.PerformancePageTests" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +200,8 @@
       <workItem from="1699516941297" duration="26890000" />
       <workItem from="1699603125929" duration="27389000" />
       <workItem from="1699862331819" duration="27508000" />
-      <workItem from="1699948711014" duration="5948000" />
+      <workItem from="1699948711014" duration="9744000" />
+      <workItem from="1699961377678" duration="2357000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
       <option name="closed" value="true" />

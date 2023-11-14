@@ -36,7 +36,6 @@ public class DashboardPageTests extends BaseTest {
         homePage.goToThePage("Dashboard");
     }
 
-    //checking if all the widgets are displayed on dashboard page
     @Test
     public void areDashboardWidgetsDisplayed() {
         Assert.assertTrue(dashboardPage.areDashboardElementsDisplayed(widgetTitlesList));
