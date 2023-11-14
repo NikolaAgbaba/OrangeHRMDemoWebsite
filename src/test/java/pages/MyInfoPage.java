@@ -71,15 +71,15 @@ public class MyInfoPage extends BasePage {
 
     //method for changing the contact info for city, mobile and work email
     public void changeContactInfo(String city, String mobile, String workEmail) {
-        if (!cityInputField.getAttribute("value").equals("")) {
+        if (!cityInputField.getAttribute("value").isEmpty()) {
             cityInputField.sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);
         }
         cityInputField.sendKeys(city);
-        if (!mobileInputField.getAttribute("value").equals("")) {
+        if (!mobileInputField.getAttribute("value").isEmpty()) {
             mobileInputField.sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);
         }
         mobileInputField.sendKeys(mobile);
-        if (!workEmailInputField.getAttribute("value").equals("")) {
+        if (!workEmailInputField.getAttribute("value").isEmpty()) {
             workEmailInputField.sendKeys(Keys.CONTROL + "a", Keys.BACK_SPACE);
         }
         workEmailInputField.sendKeys(workEmail);

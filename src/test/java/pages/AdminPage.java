@@ -110,10 +110,6 @@ public class AdminPage extends BasePage{
         saveButton.click();
     }
 
-//    public String getJobTitleInputFieldValue(){
-//        return jobTitleInputField.getAttribute("value");
-//    }
-
     //method for checking if the job is present in the jobs list
     public boolean isJobPresent(String jobTitle){
         boolean jobTitleIsPresent = false;

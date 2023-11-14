@@ -46,7 +46,7 @@ public class DashboardPage extends BasePage {
     public boolean areDashboardElementsDisplayed(List<String> widgetsTitlesList) {
         boolean areDisplayed = true;
         for (int i = 0; i < dashboardWidgets.size(); i++) {
-            if (!dashboardWidgets.get(i).getText().contains(headersList.get(i).getText())) {
+            if (!dashboardWidgets.get(i).getText().contains(widgetsTitlesList.get(i))) {
                 areDisplayed = false;
                 break;
             }

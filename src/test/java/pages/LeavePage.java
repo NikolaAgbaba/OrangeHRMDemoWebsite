@@ -93,7 +93,6 @@ public class LeavePage extends BasePage {
         }
         dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date fromDate = dateFormat.parse(fromDateValue);
-        Date toDate = dateFormat.parse(toDateValue);
         searchByDate(fromDateValue, toDateValue);
         for (WebElement el : datesList) {
             String fromDateElement = el.getText().substring(0, 10);
