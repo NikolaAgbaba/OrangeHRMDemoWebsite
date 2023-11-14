@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="Renamed the helper class so that it makes more sense, deleted commented code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BuzzPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BuzzPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/PIMPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/PIMPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BuzzPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BuzzPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +73,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.AdminPageTests">
+  <component name="RunManager" selected="TestNG.tests">
     <configuration name="AdminPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
@@ -88,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DashboardPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="BuzzPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -97,7 +100,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DashboardPageTests" />
+      <option name="MAIN_CLASS_NAME" value="tests.BuzzPageTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -105,7 +108,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DashboardPageTests.areDashboardWidgetsDisplayed" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PIMPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -114,16 +117,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.DashboardPageTests" />
-      <option name="METHOD_NAME" value="areDashboardWidgetsDisplayed" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="tests.PIMPageTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecruitmentPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="PerformancePageTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
         <pattern>
@@ -132,7 +134,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.RecruitmentPageTests" />
+      <option name="MAIN_CLASS_NAME" value="tests.PerformancePageTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -158,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AdminPageTests" />
         <item itemvalue="TestNG.tests" />
-        <item itemvalue="TestNG.DashboardPageTests.areDashboardWidgetsDisplayed" />
-        <item itemvalue="TestNG.DashboardPageTests" />
-        <item itemvalue="TestNG.RecruitmentPageTests" />
+        <item itemvalue="TestNG.PerformancePageTests" />
+        <item itemvalue="TestNG.BuzzPageTests" />
+        <item itemvalue="TestNG.PIMPageTests" />
+        <item itemvalue="TestNG.AdminPageTests" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +185,7 @@
       <workItem from="1699516941297" duration="26890000" />
       <workItem from="1699603125929" duration="27389000" />
       <workItem from="1699862331819" duration="27508000" />
-      <workItem from="1699948711014" duration="2556000" />
+      <workItem from="1699948711014" duration="5159000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
       <option name="closed" value="true" />

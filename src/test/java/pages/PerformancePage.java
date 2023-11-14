@@ -55,10 +55,10 @@ public class PerformancePage extends BasePage {
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[3]/div/div/div/form/div[1]/div/div[2]/input")
     private WebElement logNameInputField;
 
-    @FindBy(className = "--positive")
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[3]/div/div/div/form/div[2]/div/button[1]")
     private WebElement positiveLogButton;
 
-    @FindBy(className = "--deselected")
+    @FindBy(xpath = "//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[3]/div/div/div/form/div[2]/div/button[2]")
     private WebElement negativeLogButton;
 
     @FindBy(className = "oxd-textarea")

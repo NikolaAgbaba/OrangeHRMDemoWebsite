@@ -94,6 +94,7 @@ public class BuzzPage extends BasePage {
     //method for getting a text from the newest post
     public String getNewestPostText() {
         String postText = "";
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-buzz-newsfeed-posts")));
         for (int i = 0; i < postsTextList.size(); i++) {
             postText = postsTextList.get(0).getText();
         }
@@ -226,7 +227,6 @@ public class BuzzPage extends BasePage {
             LocalDate postDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("yyy-MM-dd"));
             postDates.add(postDate);
         }
-        System.out.println(postDates);
         if (!datesList.isEmpty()) {
             for (int i = postDates.size() - 1; i > 0; i--) {
                 if (postDates.get(i).isAfter(postDates.get(i - 1))) {

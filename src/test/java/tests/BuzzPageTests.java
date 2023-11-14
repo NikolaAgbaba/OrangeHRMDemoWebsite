@@ -56,11 +56,9 @@ public class BuzzPageTests extends BaseTest {
     @Test(priority = 2)
     public void editAPost() {
         String firstPost = buzzPage.getNewestPostText();
-        System.out.println(firstPost);
         String editingPart = "edited";
         buzzPage.deleteOrEditAPost("edit", editingPart);
         softAssert.assertEquals(buzzPage.getMessageText(), "Success");
-        System.out.println(buzzPage.getNewestPostText());
         softAssert.assertEquals(firstPost + editingPart, buzzPage.getNewestPostText());
         softAssert.assertAll();
     }
