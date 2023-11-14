@@ -9,7 +9,9 @@
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/AdminPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AdminPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/BuzzPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BuzzPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/DashboardPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/DashboardPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LeavePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LeavePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MyInfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MyInfoPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AdminPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AdminPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +190,7 @@
       <workItem from="1699516941297" duration="26890000" />
       <workItem from="1699603125929" duration="27389000" />
       <workItem from="1699862331819" duration="27508000" />
-      <workItem from="1699948711014" duration="536000" />
+      <workItem from="1699948711014" duration="1883000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
       <option name="closed" value="true" />
