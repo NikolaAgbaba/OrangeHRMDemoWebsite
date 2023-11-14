@@ -21,7 +21,7 @@ public class AdminPageTests extends BaseTest {
         adminPage = new AdminPage(driver, wait, faker);
         homePage = new HomePage(driver, wait, faker);
         jobTitle = faker.job().title();
-        editedJob = jobTitle + " " + faker.job().title();
+        editedJob = jobTitle + " - edited job";
     }
 
     @BeforeMethod
