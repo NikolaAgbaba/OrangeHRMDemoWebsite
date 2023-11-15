@@ -20,7 +20,7 @@ public class AdminPageTests extends BaseTest {
         super.beforeClass();
         adminPage = new AdminPage(driver, wait, faker);
         homePage = new HomePage(driver, wait, faker);
-        jobTitle = faker.job().title();
+        jobTitle = "a" + faker.job().title();
         editedJob = jobTitle + " - edited job";
     }
 
