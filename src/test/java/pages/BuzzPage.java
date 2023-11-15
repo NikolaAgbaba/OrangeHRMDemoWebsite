@@ -225,7 +225,7 @@ public class BuzzPage extends BasePage {
         dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         for (WebElement el : datesList) {
             String date = el.getText().substring(0, 10);
-            LocalDate postDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("yyy-MM-dd"));
+            LocalDate postDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
             postDates.add(postDate);
         }
         if (!datesList.isEmpty()) {
