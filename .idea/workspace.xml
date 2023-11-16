@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="Renamed the helper class so that it makes more sense, deleted commented code" />
+    <list default="true" id="f66e327c-c60f-4b66-826e-dc41a47e997c" name="Changes" comment="Renamed the helper class so that it makes more sense, deleted commented code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +187,7 @@
       <workItem from="1699961377678" duration="2357000" />
       <workItem from="1699968845071" duration="2933000" />
       <workItem from="1700035151301" duration="6771000" />
-      <workItem from="1700121521283" duration="2510000" />
+      <workItem from="1700121521283" duration="3797000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
       <option name="closed" value="true" />
