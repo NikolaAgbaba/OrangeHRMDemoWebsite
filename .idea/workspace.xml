@@ -71,7 +71,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.AdminPageTests">
+  <component name="RunManager" selected="TestNG.TimePageTests">
     <configuration name="AdminPageTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="VegaITProject" />
       <extension name="coverage">
@@ -158,9 +158,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AdminPageTests" />
         <item itemvalue="TestNG.TimePageTests" />
         <item itemvalue="TestNG.tests" />
+        <item itemvalue="TestNG.AdminPageTests" />
         <item itemvalue="TestNG.ClaimPageTests" />
         <item itemvalue="TestNG.BuzzPageTests" />
       </list>
@@ -187,7 +187,8 @@
       <workItem from="1699961377678" duration="2357000" />
       <workItem from="1699968845071" duration="2933000" />
       <workItem from="1700035151301" duration="6771000" />
-      <workItem from="1700121521283" duration="3797000" />
+      <workItem from="1700121521283" duration="7003000" />
+      <workItem from="1700207820138" duration="3019000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed the helper class so that it makes more sense, deleted commented code">
       <option name="closed" value="true" />

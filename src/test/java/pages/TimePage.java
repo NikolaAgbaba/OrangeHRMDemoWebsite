@@ -278,46 +278,55 @@ public class TimePage extends BasePage {
 
     //method for getting the saved project value
     public String getSavedProjectValue() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-body")));
         return savedProjectValue.getText();
     }
 
     //method for getting the saved activity value
     public String getSavedActivityValue() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-body")));
         return savedActivityValue.getText();
     }
 
     //method for getting the saved monday value
     public String getSavedMondayValue() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-body")));
         return savedMondayValue.getText();
     }
 
     //method for getting the saved tuesday value
     public String getSavedTuesdayValue() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-body")));
         return savedTuesdayValue.getText();
     }
 
     //method for getting the saved wednesday value
     public String getSavedWednesdayValue() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-body")));
         return savedWednesdayValue.getText();
     }
 
     //method for getting the saved thursday value
     public String getSavedThursdayValue() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-body")));
         return savedThursdayValue.getText();
     }
 
     //method for getting the saved friday value
     public String getSavedFridayValue() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-body")));
         return savedFridayValue.getText();
     }
 
     //method for getting the saved saturday value
     public String getSavedSaturdayValue() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-body")));
         return savedSaturdayValue.getText();
     }
 
     //method for getting the saved sunday value
     public String getSavedSundayValue() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("orangehrm-timesheet-body")));
         return savedSundayValue.getText();
     }
 
